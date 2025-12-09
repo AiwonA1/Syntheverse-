@@ -243,7 +243,7 @@ async function main() {
     logger.log("=== Initial State ===");
     const initialEpoch = await token.currentEpoch();
     const epochNames = ["Founders", "Pioneer", "Public", "Ecosystem"];
-    logger.log("Current Epoch:", epochNames[initialEpoch]);
+    logger.log("Current Epoch:", epochNames[Number(initialEpoch)]);
     logger.log("");
 
     // Read papers
@@ -404,6 +404,10 @@ async function main() {
     // Calculate scores for HHF-AI paper
     const hhfScores = calculateScores(hhfPaper, "HHF-AI");
     logger.log("HHF-AI Paper Scores:", hhfScores);
+    
+    // Check which epoch it qualifies for based on density
+    const hhfQualifiedEpoch = await pod.getQualifiedEpoch(hhfScores.density);
+    logger.log("  Qualified Epoch (based on density):", epochNames[Number(hhfQualifiedEpoch)]);
     logger.log("");
 
     logger.log("Validating HHF-AI discovery...");
@@ -435,6 +439,10 @@ async function main() {
     // Calculate scores for PoD paper
     const podScores = calculateScores(podPaper, "PoD");
     logger.log("PoD Protocol Paper Scores:", podScores);
+    
+    // Check which epoch it qualifies for based on density
+    const podQualifiedEpoch = await pod.getQualifiedEpoch(podScores.density);
+    logger.log("  Qualified Epoch (based on density):", epochNames[Number(podQualifiedEpoch)]);
     logger.log("");
 
     logger.log("Validating PoD Protocol discovery...");

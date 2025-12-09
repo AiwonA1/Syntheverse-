@@ -11,6 +11,18 @@ from eth_account import Account
 import os
 from dotenv import load_dotenv
 
+# Import HHF-AI evaluator (with fallback)
+try:
+    from .hhf_ai_evaluator import get_evaluator
+    HHF_AI_AVAILABLE = True
+except ImportError:
+    try:
+        from hhf_ai_evaluator import get_evaluator
+        HHF_AI_AVAILABLE = True
+    except ImportError:
+        HHF_AI_AVAILABLE = False
+        print("Warning: HHF-AI evaluator not available. Install dependencies: pip install -r requirements.txt")
+
 load_dotenv()
 
 
@@ -19,13 +31,14 @@ class SyntheverseBlockchainBridge:
     Bridge between Syntheverse HHF-AI and blockchain Proof-of-Discovery protocol
     """
     
-    def __init__(self, rpc_url: str, private_key: Optional[str] = None):
+    def __init__(self, rpc_url: str, private_key: Optional[str] = None, use_real_ai: bool = True):
         """
         Initialize blockchain bridge
         
         Args:
             rpc_url: Ethereum RPC endpoint (local or testnet)
             private_key: Private key for signing transactions (optional for read-only)
+            use_real_ai: If True, use real HHF-AI evaluator (requires API key)
         """
         self.w3 = Web3(Web3.HTTPProvider(rpc_url))
         
@@ -43,6 +56,13 @@ class SyntheverseBlockchainBridge:
         # Contract ABIs (simplified - should load from artifacts)
         self.pod_abi = []  # Load from compiled contract
         self.ai_integration_abi = []  # Load from compiled contract
+        
+        # Initialize HHF-AI evaluator
+        if HHF_AI_AVAILABLE:
+            self.evaluator = get_evaluator(use_mock=not use_real_ai)
+        else:
+            print("Warning: Using fallback mock evaluator (HHF-AI not available)")
+            self.evaluator = None
         
     def load_contracts(self, deployment_file: str):
         """
@@ -91,50 +111,37 @@ class SyntheverseBlockchainBridge:
     def evaluate_discovery(
         self,
         content: str,
-        fractal_embedding: Dict
-    ) -> Tuple[int, int, int]:
+        fractal_embedding: Optional[Dict] = None,
+        context: Optional[str] = None
+    ) -> Tuple[int, int, int, str]:
         """
         Evaluate discovery using HHF-AI system
         Returns coherence, density, and novelty scores
         
         Args:
             content: Discovery content
-            fractal_embedding: Fractal embedding data
+            fractal_embedding: Optional fractal embedding data
+            context: Optional context about existing discoveries
             
         Returns:
-            Tuple of (coherence_score, density_score, novelty_score)
+            Tuple of (coherence_score, density_score, novelty_score, analysis)
             Each score is 0-10000
         """
-        # Placeholder for HHF-AI evaluation
-        # In production, this would call the actual HHF-AI system
-        
-        # Mock evaluation (replace with actual HHF-AI logic)
-        coherence = self._calculate_coherence(content, fractal_embedding)
-        density = self._calculate_density(content, fractal_embedding)
-        novelty = self._calculate_novelty(content, fractal_embedding)
-        
-        return (coherence, density, novelty)
-    
-    def _calculate_coherence(self, content: str, embedding: Dict) -> int:
-        """Calculate coherence score (0-10000)"""
-        # Placeholder: actual HHF-AI coherence calculation
-        # This would analyze structural consistency, symbolic alignment, etc.
-        base_score = len(content) % 1000
-        return min(10000, base_score + 500)  # Mock: returns 500-1500
-    
-    def _calculate_density(self, content: str, embedding: Dict) -> int:
-        """Calculate density score (0-10000)"""
-        # Placeholder: actual HHF-AI density calculation
-        # This would analyze structural + informational density
-        base_score = len(content) % 800
-        return min(10000, base_score + 400)  # Mock: returns 400-1200
-    
-    def _calculate_novelty(self, content: str, embedding: Dict) -> int:
-        """Calculate novelty score (0-10000)"""
-        # Placeholder: actual HHF-AI novelty calculation
-        # This would compare against existing FractiEmbedding
-        base_score = len(content) % 600
-        return min(10000, base_score + 300)  # Mock: returns 300-900
+        # Use real HHF-AI evaluator
+        if self.evaluator:
+            coherence, density, novelty, analysis = self.evaluator.evaluate_discovery(
+                content=content,
+                fractal_embedding=fractal_embedding,
+                context=context
+            )
+            return (coherence, density, novelty, analysis)
+        else:
+            # Fallback to simple mock
+            coherence = min(10000, len(content) // 10 + 5000)
+            density = min(10000, len(content) // 8 + 5000)
+            novelty = min(10000, len(content) // 12 + 5000)
+            analysis = "Fallback evaluation (HHF-AI not available)"
+            return (coherence, density, novelty, analysis)
     
     def submit_discovery(self, content: str, fractal_embedding: Dict) -> str:
         """
@@ -180,7 +187,8 @@ class SyntheverseBlockchainBridge:
         discovery_id: str,
         coherence: int,
         density: int,
-        novelty: int
+        novelty: int,
+        analysis: Optional[str] = None
     ) -> str:
         """
         Validate discovery with AI scores
@@ -266,8 +274,9 @@ def main():
     }
     
     # Evaluate with HHF-AI
-    coherence, density, novelty = bridge.evaluate_discovery(content, fractal_embedding)
+    coherence, density, novelty, analysis = bridge.evaluate_discovery(content, fractal_embedding)
     print(f"HHF-AI Evaluation: Coherence={coherence}, Density={density}, Novelty={novelty}")
+    print(f"Analysis: {analysis}")
     
     # Submit to blockchain
     tx_hash = bridge.submit_discovery(content, fractal_embedding)

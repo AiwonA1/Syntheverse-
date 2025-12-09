@@ -31,6 +31,11 @@ contract SyntheverseToken is ERC20, ERC20Burnable, Ownable, Pausable {
     uint256 public founderAllocation = 0;
     uint256 public coherenceDensity = 0;
     
+    // Halving epochs for founder rewards
+    uint256 public founderEpochNumber = 0; // Current founder epoch (halving cycle)
+    uint256 public constant FOUNDER_EPOCH_HALVING_INTERVAL = 1000000; // Coherence density units per halving
+    uint256 public constant INITIAL_FOUNDER_REWARD_POOL = TOTAL_SUPPLY * 50 / 100; // 45T for Founders epoch
+    
     // Addresses authorized for epoch distributions
     mapping(address => bool) public authorizedDistributors;
     
@@ -40,14 +45,14 @@ contract SyntheverseToken is ERC20, ERC20Burnable, Ownable, Pausable {
     
     constructor(address initialOwner) ERC20("Syntheverse", "SYNTH") Ownable(initialOwner) {
         // Initialize epoch reserves
-        // Founders: Dynamic (starts at 0, adjusts based on coherence)
-        epochReserves[Epoch.Founders] = 0;
-        // Pioneer: 10% of total supply
+        // Founders: 50% of total supply (45T) with halving epochs
+        epochReserves[Epoch.Founders] = TOTAL_SUPPLY * 50 / 100; // 45T
+        // Pioneer: 10% of total supply (9T)
         epochReserves[Epoch.Pioneer] = TOTAL_SUPPLY * 10 / 100;
-        // Public: 40% of total supply
-        epochReserves[Epoch.Public] = TOTAL_SUPPLY * 40 / 100;
-        // Ecosystem: 50% of total supply (remaining)
-        epochReserves[Epoch.Ecosystem] = TOTAL_SUPPLY * 50 / 100;
+        // Public: 20% of total supply (18T)
+        epochReserves[Epoch.Public] = TOTAL_SUPPLY * 20 / 100;
+        // Ecosystem: 20% of total supply (18T) - remaining
+        epochReserves[Epoch.Ecosystem] = TOTAL_SUPPLY * 20 / 100;
         
         // Authorize owner as initial distributor
         authorizedDistributors[initialOwner] = true;
@@ -66,6 +71,11 @@ contract SyntheverseToken is ERC20, ERC20Burnable, Ownable, Pausable {
         
         // Adjust founder allocation dynamically based on coherence
         if (currentEpoch == Epoch.Founders) {
+            // Update founder epoch number based on halving intervals
+            uint256 newEpochNumber = newDensity / FOUNDER_EPOCH_HALVING_INTERVAL;
+            if (newEpochNumber > founderEpochNumber) {
+                founderEpochNumber = newEpochNumber;
+            }
             founderAllocation = calculateFounderAllocation(newDensity);
         }
         
@@ -76,13 +86,57 @@ contract SyntheverseToken is ERC20, ERC20Burnable, Ownable, Pausable {
     }
     
     /**
-     * @dev Calculate founder allocation based on coherence density
+     * @dev Calculate founder allocation based on coherence density with halving
+     * Halving epochs: rewards halve every FOUNDER_EPOCH_HALVING_INTERVAL coherence density units
+     * Starting from 45T (Founders epoch pool), then 22.5T, 11.25T, 5.625T, etc.
+     * 
+     * Founders epoch has its own 45T pool (50% of total supply)
+     * Halving happens at intervals (every 1M coherence density units)
      */
-    function calculateFounderAllocation(uint256 density) internal pure returns (uint256) {
-        // Dynamic formula: allocation increases with density, capped at 10% of total
-        uint256 maxFounderAllocation = TOTAL_SUPPLY * 10 / 100;
-        uint256 calculated = (density * maxFounderAllocation) / 10000;
-        return calculated > maxFounderAllocation ? maxFounderAllocation : calculated;
+    function calculateFounderAllocation(uint256 density) internal view returns (uint256) {
+        // For the first halving epoch (density < halving interval), use full 45T Founders pool
+        if (density < FOUNDER_EPOCH_HALVING_INTERVAL) {
+            return INITIAL_FOUNDER_REWARD_POOL; // 45T
+        }
+        
+        // Calculate which halving epoch we're in
+        uint256 epochNumber = density / FOUNDER_EPOCH_HALVING_INTERVAL;
+        
+        // Limit halving to prevent pool from becoming too small
+        // Cap at reasonable number of halvings
+        if (epochNumber > 10) {
+            epochNumber = 10;
+        }
+        
+        // Calculate halved reward pool: 45T / (2^epochNumber)
+        uint256 halvedPool = INITIAL_FOUNDER_REWARD_POOL; // Start with 45T
+        
+        // Halve for each epoch
+        for (uint256 i = 0; i < epochNumber; i++) {
+            halvedPool = halvedPool / 2;
+        }
+        
+        // Ensure minimum pool size (at least 0.5% of total supply = 450B tokens)
+        uint256 minPool = TOTAL_SUPPLY / 200;
+        if (halvedPool < minPool) {
+            halvedPool = minPool;
+        }
+        
+        return halvedPool;
+    }
+    
+    /**
+     * @dev Get current founder epoch number (halving cycle)
+     */
+    function getFounderEpochNumber() external view returns (uint256) {
+        return founderEpochNumber;
+    }
+    
+    /**
+     * @dev Get current halved founder reward pool
+     */
+    function getCurrentFounderRewardPool() external view returns (uint256) {
+        return calculateFounderAllocation(coherenceDensity);
     }
     
     /**

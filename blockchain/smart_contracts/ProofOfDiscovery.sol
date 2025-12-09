@@ -40,10 +40,17 @@ contract ProofOfDiscovery is Ownable, ReentrancyGuard {
     uint256 public minDensityScore = 300;        // Minimum density to be valid
     uint256 public minNoveltyScore = 200;        // Minimum novelty to be valid
     
-    // Rewards configuration
-    uint256 public baseReward = 1000 * 10**18;   // Base reward in tokens
-    uint256 public coherenceMultiplier = 100;     // Multiplier for coherence (in basis points)
-    uint256 public densityMultiplier = 50;       // Multiplier for density (in basis points)
+    // Epoch qualification thresholds (based on density)
+    uint256 public foundersDensityThreshold = 8000;   // Density >= 8000 qualifies for Founders
+    uint256 public pioneerDensityThreshold = 6000;    // Density >= 6000 qualifies for Pioneer
+    uint256 public publicDensityThreshold = 4000;     // Density >= 4000 qualifies for Public
+    // Density < 4000 qualifies for Ecosystem
+    
+    // Rewards configuration (PoD Protocol: S = Φ × ρ × (1−R) × W)
+    // Reward = (PoD Score / 10000) × availableEpochBalance
+    // PoD Score directly translates to percentage of available epoch tokens
+    uint256 public minPoDScore = 1000;            // Minimum PoD Score to receive reward (out of 10000)
+    uint256 public maxRewardPercentage = 10000;   // Maximum reward as % of epoch balance (in basis points, 10000 = 100%)
     
     // AI Integration interface (for off-chain HHF-AI validation)
     address public aiValidator;                  // Address authorized to validate discoveries
@@ -157,8 +164,13 @@ contract ProofOfDiscovery is Ownable, ReentrancyGuard {
         discovery.noveltyScore = noveltyScore;
         discovery.validated = true;
         
-        // Calculate reward based on scores
-        uint256 reward = calculateReward(coherenceScore, densityScore, noveltyScore);
+        // Calculate PoD Score: S = Φ × ρ × (1−R) × W
+        // Where: Φ = coherence, ρ = density, (1−R) = novelty (non-redundancy), W = epoch weight
+        // Scores are 0-10000, so we normalize to 0-1 for calculation
+        uint256 podScore = calculatePoDScore(coherenceScore, densityScore, noveltyScore);
+        
+        // Determine which epoch this discovery qualifies for based on density
+        SyntheverseToken.Epoch qualifiedEpoch = determineEpoch(densityScore);
         
         // Update total coherence density
         uint256 contributionDensity = (coherenceScore * densityScore) / 1000;
@@ -167,11 +179,13 @@ contract ProofOfDiscovery is Ownable, ReentrancyGuard {
         // Update token's coherence density
         token.updateCoherenceDensity(totalCoherenceDensity);
         
-        // Distribute reward - use current epoch
-        if (reward > 0) {
-            SyntheverseToken.Epoch currentEpoch = token.currentEpoch();
+        // Calculate reward based on PoD Score and qualified epoch balance
+        uint256 reward = calculateReward(podScore, coherenceScore, densityScore, qualifiedEpoch);
+        
+        // Distribute reward to the qualified epoch
+        if (reward > 0 && podScore >= minPoDScore) {
             token.distributeTokens(
-                currentEpoch,
+                qualifiedEpoch,
                 discovery.discoverer,
                 reward
             );
@@ -190,19 +204,90 @@ contract ProofOfDiscovery is Ownable, ReentrancyGuard {
     }
     
     /**
-     * @dev Calculate reward based on discovery scores
+     * @dev Calculate PoD Score: S = Φ × ρ × (1−R) × W
+     * Where: Φ = coherence, ρ = density, (1−R) = novelty, W = epoch weight (1.0 for now)
+     * Scores are normalized: (coherence/10000) × (density/10000) × (novelty/10000) × 10000
      */
-    function calculateReward(
+    function calculatePoDScore(
         uint256 coherence,
         uint256 density,
         uint256 novelty
+    ) internal pure returns (uint256) {
+        // PoD Score: S = (Φ/10000) × (ρ/10000) × (novelty/10000) × 10000
+        // This simplifies to: (coherence × density × novelty) / (10000 × 10000)
+        // Result is in 0-10000 range
+        return (coherence * density * novelty) / (10000 * 10000);
+    }
+    
+    /**
+     * @dev Determine which epoch a discovery qualifies for based on density
+     * Higher density = earlier epoch (Founders > Pioneer > Public > Ecosystem)
+     */
+    function determineEpoch(uint256 density) internal view returns (SyntheverseToken.Epoch) {
+        if (density >= foundersDensityThreshold) {
+            return SyntheverseToken.Epoch.Founders;
+        } else if (density >= pioneerDensityThreshold) {
+            return SyntheverseToken.Epoch.Pioneer;
+        } else if (density >= publicDensityThreshold) {
+            return SyntheverseToken.Epoch.Public;
+        } else {
+            return SyntheverseToken.Epoch.Ecosystem;
+        }
+    }
+    
+    /**
+     * @dev Calculate reward based on PoD Score and qualified epoch balance
+     * Reward = (PoD Score / 10000) × epochRewardPercentage × availableEpochBalance / 10000
+     * Capped at maxRewardPercentage of epoch balance
+     */
+    function calculateReward(
+        uint256 podScore,
+        uint256 coherence,
+        uint256 density,
+        SyntheverseToken.Epoch qualifiedEpoch
     ) internal view returns (uint256) {
-        // Base reward with multipliers
-        uint256 coherenceBonus = (baseReward * coherence * coherenceMultiplier) / (10000 * 10000);
-        uint256 densityBonus = (baseReward * density * densityMultiplier) / (10000 * 10000);
-        uint256 noveltyBonus = (baseReward * novelty) / 10000;
         
-        return baseReward + coherenceBonus + densityBonus + noveltyBonus;
+        // Get epoch reserve and distributed amounts for the qualified epoch
+        uint256 epochReserve = token.epochReserves(qualifiedEpoch);
+        uint256 epochDistributed = token.epochDistributed(qualifiedEpoch);
+        uint256 availableBalance = epochReserve > epochDistributed ? epochReserve - epochDistributed : 0;
+        
+        // For Founders epoch: use epoch reserve (45T) with halving applied
+        if (qualifiedEpoch == SyntheverseToken.Epoch.Founders) {
+            // Get current halved founder reward pool (starts at 45T, halves based on density)
+            uint256 founderRewardPool = token.getCurrentFounderRewardPool();
+            uint256 founderDistributed = token.epochDistributed(qualifiedEpoch);
+            // Use the smaller of: epoch reserve or halved pool
+            uint256 maxAvailable = epochReserve > 0 ? epochReserve : founderRewardPool;
+            availableBalance = maxAvailable > founderDistributed ? maxAvailable - founderDistributed : 0;
+        }
+        
+        if (availableBalance == 0) {
+            return 0;
+        }
+        
+        // Calculate reward: PoD Score directly translates to percentage of REMAINING available balance
+        // Reward = (PoD Score / 10000) × availableBalance
+        // Example: PoD Score 7429 = 74.29% of remaining available epoch tokens
+        // PoD Score is 0-10000, which directly represents 0-100% of available tokens
+        uint256 rewardPercentage = podScore; // Already in basis points (0-10000 = 0-100%)
+        
+        // Cap at maxRewardPercentage (default 100% = 10000 basis points)
+        // But also ensure we don't exceed what's available
+        if (rewardPercentage > maxRewardPercentage) {
+            rewardPercentage = maxRewardPercentage;
+        }
+        
+        // Calculate reward: (rewardPercentage / 10000) × availableBalance
+        // This gives the exact percentage of REMAINING available tokens based on PoD Score
+        uint256 reward = (availableBalance * rewardPercentage) / 10000;
+        
+        // Ensure reward doesn't exceed available balance (critical safety check)
+        if (reward > availableBalance) {
+            reward = availableBalance;
+        }
+        
+        return reward;
     }
     
     /**
@@ -227,16 +312,34 @@ contract ProofOfDiscovery is Ownable, ReentrancyGuard {
     }
     
     /**
+     * @dev Update epoch qualification thresholds
+     */
+    function setEpochThresholds(
+        uint256 _foundersThreshold,
+        uint256 _pioneerThreshold,
+        uint256 _publicThreshold
+    ) external onlyOwner {
+        foundersDensityThreshold = _foundersThreshold;
+        pioneerDensityThreshold = _pioneerThreshold;
+        publicDensityThreshold = _publicThreshold;
+    }
+    
+    /**
+     * @dev Get which epoch a discovery would qualify for based on density
+     */
+    function getQualifiedEpoch(uint256 density) external view returns (SyntheverseToken.Epoch) {
+        return determineEpoch(density);
+    }
+    
+    /**
      * @dev Update reward configuration
      */
     function setRewardConfig(
-        uint256 _baseReward,
-        uint256 _coherenceMultiplier,
-        uint256 _densityMultiplier
+        uint256 _minPoDScore,
+        uint256 _maxRewardPercentage
     ) external onlyOwner {
-        baseReward = _baseReward;
-        coherenceMultiplier = _coherenceMultiplier;
-        densityMultiplier = _densityMultiplier;
+        minPoDScore = _minPoDScore;
+        maxRewardPercentage = _maxRewardPercentage;
     }
     
     /**

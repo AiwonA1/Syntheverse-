@@ -1,0 +1,592 @@
+{
+  "metadata": {
+    "startTime": "2025-12-09T20:31:21.751Z",
+    "endTime": "2025-12-09T20:31:22.197Z",
+    "duration": 0.446,
+    "status": "SUCCESS"
+  },
+  "summary": {
+    "totalErrors": 0,
+    "totalTransactions": 4,
+    "totalLogs": 86
+  },
+  "errors": [],
+  "transactions": [
+    {
+      "timestamp": "2025-12-09T20:31:22.130Z",
+      "hash": "0x9c96b3339da64e4a591517203654f6a0b2fc606df9f7e361695522060b265896",
+      "type": "Submit Discovery (HHF-AI)",
+      "details": {
+        "discoverer": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "contentHash": "0x4eac40c861ea67f982bd3aeedccf5c8032e13b536ef54fdccddf0c87fa89b971",
+        "fractalHash": "0xad58396063ace86cb8aaf9a23970134e00860aff01df8778f9edd1e50f9f7891"
+      }
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.151Z",
+      "hash": "0x9a47e6b3c48023fb9ff331bf42a87206dd59c07519e60a8da4f96d38d07efa88",
+      "type": "Submit Discovery (PoD Protocol)",
+      "details": {
+        "discoverer": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "contentHash": "0xac6600dce6bb207335c68bc6940ad0add963a2e0971abf2426800e77289f7e2d",
+        "fractalHash": "0x437883ccfcdd5e2847b7b30030f433ced411713766ef01d1fd76bf9c8a8be474"
+      }
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.163Z",
+      "hash": "0x72b82aa527ab033473658e5a6f2dbcfbab1dc25c3ef5deec01b965419d8b5e91",
+      "type": "Validate Discovery (HHF-AI)",
+      "details": {
+        "discoveryId": "0x05c68620e0bdd1d2e27eb1a3beb28401e1d88b721bd6175a5359df7a00bfe890",
+        "scores": {
+          "coherence": 9200,
+          "density": 8500,
+          "novelty": 9500
+        }
+      }
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.172Z",
+      "hash": "0x1c6e566b0bc5d8e9b8747c8e4a16fff56703368ff8a4ef080dc02ce4aa83215f",
+      "type": "Validate Discovery (PoD Protocol)",
+      "details": {
+        "discoveryId": "0x2116454481f55c2d1c03e5b3f82d1f36cca5f3b3f7ad19db5f990ec4d4efd160",
+        "scores": {
+          "coherence": 8800,
+          "density": 9200,
+          "novelty": 9000
+        }
+      }
+    }
+  ],
+  "logs": [
+    {
+      "timestamp": "2025-12-09T20:31:21.751Z",
+      "message": "╔══════════════════════════════════════════════════════════════╗",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-09T20:31:21.753Z",
+      "message": "║     Syntheverse Paper Discovery Test                        ║",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-09T20:31:21.754Z",
+      "message": "╚══════════════════════════════════════════════════════════════╝",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-09T20:31:21.754Z",
+      "message": "",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-09T20:31:21.754Z",
+      "message": "✓ Loaded deployment addresses",
+      "data": {
+        "file": "/Users/macbook/Desktop/Syntheverse-/blockchain/deployments/deployment-localhost.json"
+      }
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.022Z",
+      "message": "Deployer:",
+      "data": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.022Z",
+      "message": "Discoverer 1:",
+      "data": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8"
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.023Z",
+      "message": "Discoverer 2:",
+      "data": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC"
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.023Z",
+      "message": "",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.110Z",
+      "message": "Contracts:",
+      "data": {
+        "Token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+        "PoD": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+        "AI_Integration": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0"
+      }
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.110Z",
+      "message": "",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.110Z",
+      "message": "=== Initial State ===",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.116Z",
+      "message": "Current Epoch:",
+      "data": "Founders"
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.116Z",
+      "message": "",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.116Z",
+      "message": "=== Reading Papers ===",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.116Z",
+      "message": "✓ HHF-AI Paper loaded",
+      "data": {
+        "length": 3058
+      }
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.116Z",
+      "message": "✓ PoD Protocol Paper loaded",
+      "data": {
+        "length": 5134
+      }
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.116Z",
+      "message": "",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.116Z",
+      "message": "=== Paper 1: HHF-AI Paper ===",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.116Z",
+      "message": "Title: Syntheverse HHF-AI: Hydrogen-Holographic Fractal Awareness System",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.116Z",
+      "message": "Authors: FractiAI Research Team × Syntheverse Whole Brain AI",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.117Z",
+      "message": "",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.117Z",
+      "message": "Submitting HHF-AI paper as discovery...",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.130Z",
+      "message": "Transaction: Submit Discovery (HHF-AI)",
+      "data": {
+        "hash": "0x9c96b3339da64e4a591517203654f6a0b2fc606df9f7e361695522060b265896",
+        "details": {
+          "discoverer": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+          "contentHash": "0x4eac40c861ea67f982bd3aeedccf5c8032e13b536ef54fdccddf0c87fa89b971",
+          "fractalHash": "0xad58396063ace86cb8aaf9a23970134e00860aff01df8778f9edd1e50f9f7891"
+        }
+      }
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.132Z",
+      "message": "✓ Transaction confirmed",
+      "data": {
+        "blockNumber": 7,
+        "gasUsed": "213965"
+      }
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.134Z",
+      "message": "✓ HHF-AI paper submitted!",
+      "data": {
+        "discoveryId": "0x05c68620e0bdd1d2e27eb1a3beb28401e1d88b721bd6175a5359df7a00bfe890",
+        "contentHash": "0x4eac40c861ea67f982bd3aeedccf5c8032e13b536ef54fdccddf0c87fa89b971",
+        "fractalHash": "0xad58396063ace86cb8aaf9a23970134e00860aff01df8778f9edd1e50f9f7891"
+      }
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.134Z",
+      "message": "",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.134Z",
+      "message": "=== Paper 2: PoD Protocol Paper ===",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.134Z",
+      "message": "Title: Syntheverse PoD: Hydrogen-Holographic Fractal Consensus",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.134Z",
+      "message": "Authors: FractiAI Research Team × Syntheverse Whole Brain AI",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.134Z",
+      "message": "",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.137Z",
+      "message": "Submitting PoD Protocol paper as discovery...",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.151Z",
+      "message": "Transaction: Submit Discovery (PoD Protocol)",
+      "data": {
+        "hash": "0x9a47e6b3c48023fb9ff331bf42a87206dd59c07519e60a8da4f96d38d07efa88",
+        "details": {
+          "discoverer": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+          "contentHash": "0xac6600dce6bb207335c68bc6940ad0add963a2e0971abf2426800e77289f7e2d",
+          "fractalHash": "0x437883ccfcdd5e2847b7b30030f433ced411713766ef01d1fd76bf9c8a8be474"
+        }
+      }
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.154Z",
+      "message": "✓ Transaction confirmed",
+      "data": {
+        "blockNumber": 8,
+        "gasUsed": "179753"
+      }
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.155Z",
+      "message": "✓ PoD Protocol paper submitted!",
+      "data": {
+        "discoveryId": "0x2116454481f55c2d1c03e5b3f82d1f36cca5f3b3f7ad19db5f990ec4d4efd160",
+        "contentHash": "0xac6600dce6bb207335c68bc6940ad0add963a2e0971abf2426800e77289f7e2d",
+        "fractalHash": "0x437883ccfcdd5e2847b7b30030f433ced411713766ef01d1fd76bf9c8a8be474"
+      }
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.155Z",
+      "message": "",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.155Z",
+      "message": "=== Validating Discoveries ===",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.155Z",
+      "message": "HHF-AI Paper Scores:",
+      "data": {
+        "coherence": 9200,
+        "density": 8500,
+        "novelty": 9500
+      }
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.155Z",
+      "message": "",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.155Z",
+      "message": "Validating HHF-AI discovery...",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.163Z",
+      "message": "Transaction: Validate Discovery (HHF-AI)",
+      "data": {
+        "hash": "0x72b82aa527ab033473658e5a6f2dbcfbab1dc25c3ef5deec01b965419d8b5e91",
+        "details": {
+          "discoveryId": "0x05c68620e0bdd1d2e27eb1a3beb28401e1d88b721bd6175a5359df7a00bfe890",
+          "scores": {
+            "coherence": 9200,
+            "density": 8500,
+            "novelty": 9500
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.165Z",
+      "message": "✓ Validation transaction confirmed",
+      "data": {
+        "blockNumber": 9,
+        "gasUsed": "296882"
+      }
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.165Z",
+      "message": "✓ HHF-AI discovery validated!",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.165Z",
+      "message": "",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.165Z",
+      "message": "PoD Protocol Paper Scores:",
+      "data": {
+        "coherence": 8800,
+        "density": 9200,
+        "novelty": 9000
+      }
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.165Z",
+      "message": "",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.165Z",
+      "message": "Validating PoD Protocol discovery...",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.172Z",
+      "message": "Transaction: Validate Discovery (PoD Protocol)",
+      "data": {
+        "hash": "0x1c6e566b0bc5d8e9b8747c8e4a16fff56703368ff8a4ef080dc02ce4aa83215f",
+        "details": {
+          "discoveryId": "0x2116454481f55c2d1c03e5b3f82d1f36cca5f3b3f7ad19db5f990ec4d4efd160",
+          "scores": {
+            "coherence": 8800,
+            "density": 9200,
+            "novelty": 9000
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.174Z",
+      "message": "✓ Validation transaction confirmed",
+      "data": {
+        "blockNumber": 10,
+        "gasUsed": "223279"
+      }
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.174Z",
+      "message": "✓ PoD Protocol discovery validated!",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.174Z",
+      "message": "",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.174Z",
+      "message": "=== Discovery Status ===",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.180Z",
+      "message": "HHF-AI Discovery:",
+      "data": {
+        "validated": true,
+        "coherenceScore": "9200",
+        "densityScore": "8500",
+        "noveltyScore": "9500",
+        "discoverer": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "timestamp": "2025-12-09T20:31:26.000Z"
+      }
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.180Z",
+      "message": "",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.180Z",
+      "message": "PoD Protocol Discovery:",
+      "data": {
+        "validated": true,
+        "coherenceScore": "8800",
+        "densityScore": "9200",
+        "noveltyScore": "9000",
+        "discoverer": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "timestamp": "2025-12-09T20:31:27.000Z"
+      }
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.180Z",
+      "message": "",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.180Z",
+      "message": "=== Token Rewards ===",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.187Z",
+      "message": "Discoverer 1 (HHF-AI) balance:",
+      "data": {
+        "address": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "balance": "1963.45 SYNTH",
+        "balanceWei": "1963450000000000000000"
+      }
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.187Z",
+      "message": "",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.187Z",
+      "message": "Discoverer 2 (PoD Protocol) balance:",
+      "data": {
+        "address": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "balance": "1913.4 SYNTH",
+        "balanceWei": "1913400000000000000000"
+      }
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.187Z",
+      "message": "",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.187Z",
+      "message": "=== Coherence Density ===",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.192Z",
+      "message": "Coherence Metrics:",
+      "data": {
+        "totalDensity": "159160",
+        "tokenDensity": "159160",
+        "threshold": "1000"
+      }
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.192Z",
+      "message": "",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.192Z",
+      "message": "Epoch Progress:",
+      "data": "15916.00%"
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.193Z",
+      "message": "",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.195Z",
+      "message": "Current Epoch:",
+      "data": "Public"
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.195Z",
+      "message": "⚠ Epoch can be advanced!",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.195Z",
+      "message": "",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.195Z",
+      "message": "=== Test Summary ===",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.195Z",
+      "message": "✓ Both papers submitted as discoveries",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.195Z",
+      "message": "✓ Both discoveries validated with high scores",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.195Z",
+      "message": "✓ Token rewards distributed",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.195Z",
+      "message": "✓ Coherence density updated",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.195Z",
+      "message": "✓ System functioning correctly!",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.195Z",
+      "message": "",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.197Z",
+      "message": "Total Discoveries:",
+      "data": "2"
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.197Z",
+      "message": "",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.197Z",
+      "message": "=== Conclusions ===",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.197Z",
+      "message": "✅ Both discoveries were successfully validated",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.197Z",
+      "message": "✅ Token rewards were successfully distributed",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.197Z",
+      "message": "✅ Coherence density was successfully updated",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.197Z",
+      "message": "✅ Discovery count is correct",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.197Z",
+      "message": "✅ OVERALL TEST: SUCCESS - All systems functioning correctly",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.197Z",
+      "message": "",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-09T20:31:22.198Z",
+      "message": "Report saved to: /Users/macbook/Desktop/Syntheverse-/test_outputs/test_report_2025-12-09T20-31-21-750Z.txt",
+      "data": null
+    }
+  ]
+}

@@ -2,7 +2,7 @@
 pragma solidity ^0.8.20;
 
 import "@openzeppelin/contracts/access/Ownable.sol";
-import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
+import "@openzeppelin/contracts/utils/ReentrancyGuard.sol";
 import "./SyntheverseToken.sol";
 
 /**
@@ -167,10 +167,11 @@ contract ProofOfDiscovery is Ownable, ReentrancyGuard {
         // Update token's coherence density
         token.updateCoherenceDensity(totalCoherenceDensity);
         
-        // Distribute reward
+        // Distribute reward - use current epoch
         if (reward > 0) {
+            SyntheverseToken.Epoch currentEpoch = token.currentEpoch();
             token.distributeTokens(
-                SyntheverseToken.Epoch.Public,
+                currentEpoch,
                 discovery.discoverer,
                 reward
             );

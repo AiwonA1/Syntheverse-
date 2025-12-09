@@ -131,12 +131,26 @@ contract AIIntegration is Ownable {
         );
         
         for (uint256 i = 0; i < discoveryIds.length; i++) {
-            if (!validationRequests[discoveryIds[i]].processed) {
-                processValidation(
-                    discoveryIds[i],
+            bytes32 discoveryId = discoveryIds[i];
+            ValidationRequest storage request = validationRequests[discoveryId];
+            
+            if (!request.processed && request.discoverer != address(0)) {
+                request.processed = true;
+                
+                // Forward validation to ProofOfDiscovery contract
+                podContract.validateDiscovery(
+                    discoveryId,
                     coherenceScores[i],
                     densityScores[i],
                     noveltyScores[i]
+                );
+                
+                emit ValidationProcessed(
+                    discoveryId,
+                    coherenceScores[i],
+                    densityScores[i],
+                    noveltyScores[i],
+                    true
                 );
             }
         }

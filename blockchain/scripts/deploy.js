@@ -51,9 +51,10 @@ async function main() {
 
   // Save deployment addresses (for local development)
   const fs = require("fs");
+  const networkInfo = await ethers.provider.getNetwork();
   const deploymentInfo = {
     network: network.name,
-    chainId: (await ethers.provider.getNetwork()).chainId,
+    chainId: networkInfo.chainId.toString(),
     deployer: deployer.address,
     contracts: {
       SyntheverseToken: tokenAddress,

@@ -7,7 +7,7 @@
     "compile": "hardhat compile",
     "test": "hardhat test",
     "node": "hardhat node",
-    "deploy:local": "hardhat run scripts/deploy.js --network localhost",
+    "deploy:local": "hardhat run blockchain/scripts/deploy.js --network localhost",
     "deploy:testnet": "hardhat run scripts/deploy.js --network sepolia",
     "verify": "hardhat verify"
   },

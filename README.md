@@ -4,6 +4,12 @@ Hydrogen-Holographic Fractal Intelligence System (HHF-AI) & Proof-of-Discovery B
 
 ⸻
 
+## Test Environment & Validation
+
+Syntheverse includes a complete L1 blockchain test environment that validates the Proof-of-Discovery protocol using real research papers. The test environment runs on a local Hardhat blockchain network (free, no external dependencies required) and demonstrates the full discovery lifecycle: researchers submit knowledge contributions (in this case, the HHF-AI and PoD Protocol research papers from the `docs/` folder), the system computes semantic and fractal hashes to prevent redundancy, AI evaluation scores each discovery on coherence (structural consistency), density (informational richness), and novelty (uniqueness relative to existing knowledge), validated discoveries receive token rewards based on their quality scores, and the system tracks total coherence density to automatically advance through distribution epochs (Founders → Pioneer → Public → Ecosystem). Each test run generates comprehensive reports in `test_outputs/` including all transaction hashes, gas usage, validation scores, token distributions, and success/failure conclusions in both human-readable text and machine-parseable JSON formats. This test environment serves as both a validation framework for the protocol design and a demonstration of how knowledge discovery can be cryptographically valued and rewarded on-chain.
+
+⸻
+
 1. Overview
 
 Syntheverse is an open-source, whole-brain AI environment built on a hydrogen-holographic, fractal computational model.

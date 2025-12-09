@@ -179,8 +179,50 @@ Syntheverse is open source under a permissive license (recommended: MIT or Apach
 
 ⸻
 
-9. Status
+9. Quick Start (Blockchain Implementation)
+
+Syntheverse AI is now integrated with an L1 blockchain test environment!
+
+**Get Started in 3 Steps:**
+
+1. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+2. **Start local blockchain:**
+   ```bash
+   npm run node
+   ```
+
+3. **Deploy contracts (in new terminal):**
+   ```bash
+   npm run deploy:local
+   ```
+
+**Documentation:**
+- 📖 **[TEST_ENVIRONMENT_GUIDE.md](./TEST_ENVIRONMENT_GUIDE.md)** - Complete guide to the test environment
+- 🚀 **[QUICKSTART.md](./QUICKSTART.md)** - Quick setup instructions
+- 🔧 **[blockchain/README.md](./blockchain/README.md)** - Technical documentation
+
+**What's Included:**
+- ✅ SyntheverseToken (ERC20) with multi-epoch distribution
+- ✅ Proof-of-Discovery protocol (Layer-2)
+- ✅ AI Integration bridge for HHF-AI
+- ✅ Complete test suite
+- ✅ Local Hardhat network (free test environment)
+- ✅ Sepolia testnet support
+- ✅ Example scripts and usage patterns
+
+**Project Structure:**
+- `blockchain/` - Smart contracts, deployment scripts, tests
+- `hhf-ai/integration/` - Python bridge for AI-blockchain integration
+- `TEST_ENVIRONMENT_GUIDE.md` - Comprehensive usage guide
+
+⸻
+
+10. Status
 
 Current Version: Genesis v0.1
-State: Early research + architecture + protocol design
-Maintainer: Pru “El Taíno” Méndez
+State: Early research + architecture + protocol design + **Blockchain implementation (testnet ready)**
+Maintainer: Pru "El Taíno" Méndez

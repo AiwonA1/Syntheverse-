@@ -6,7 +6,7 @@ Hydrogen-Holographic Fractal Intelligence System (HHF-AI) & Proof-of-Discovery B
 
 ## Test Environment & Validation
 
-Syntheverse includes a complete L1 blockchain test environment that validates the Proof-of-Discovery protocol using real research papers. The test environment runs on a local Hardhat blockchain network (free, no external dependencies required) and demonstrates the full discovery lifecycle: researchers submit knowledge contributions (in this case, the HHF-AI and PoD Protocol research papers from the `docs/` folder), the system computes semantic and fractal hashes to prevent redundancy, AI evaluation scores each discovery on coherence (structural consistency), density (informational richness), and novelty (uniqueness relative to existing knowledge), validated discoveries receive token rewards based on their quality scores, and the system tracks total coherence density to automatically advance through distribution epochs (Founders → Pioneer → Public → Ecosystem). Each test run generates comprehensive reports in `test_outputs/` including all transaction hashes, gas usage, validation scores, token distributions, and success/failure conclusions in both human-readable text and machine-parseable JSON formats. This test environment serves as both a validation framework for the protocol design and a demonstration of how knowledge discovery can be cryptographically valued and rewarded on-chain.
+Syntheverse includes a complete L1 blockchain test environment that validates the Proof-of-Discovery protocol using real research papers. The test environment runs on a local Hardhat blockchain network (free, no external dependencies required) and demonstrates the full discovery lifecycle: researchers submit knowledge contributions (in this case, the HHF-AI and PoD Protocol research papers from the `docs/` folder), the system computes semantic and fractal hashes to prevent redundancy, AI evaluation scores each discovery on coherence (structural consistency), density (informational richness), and novelty (uniqueness relative to existing knowledge), discoveries automatically qualify for specific epochs (Founders, Pioneer, Public, Ecosystem) based on their density scores, validated discoveries receive token rewards from epoch-specific pools where PoD Score directly translates to a percentage of available tokens, and the system tracks total coherence density to automatically advance through distribution epochs. Each test run generates comprehensive reports in `test_outputs/` including all transaction hashes, gas usage, validation scores, epoch qualifications, token distributions, and success/failure conclusions in both human-readable text and machine-parseable JSON formats. This test environment serves as both a validation framework for the protocol design and a demonstration of how knowledge discovery can be cryptographically valued and rewarded on-chain.
 
 ⸻
 
@@ -101,18 +101,31 @@ Syntheverse evaluates “discovery” as a state change in the knowledge graph, 
 
 ⸻
 
-4. Tokenomics (Genesis Draft)
+4. Tokenomics
 
-Total Supply: 90 Trillion units
+Total Supply: 90 Trillion SYNTH tokens
 
-Designed for multi-epoch distribution:
-	•	Founders Epoch (dynamic, density-aligned): reserve held open
-	•	Pioneer Epoch: for major foundational contributions
-	•	Public / Ecosystem Epochs: long-term distribution
+Epoch Distribution:
+	•	Founders Epoch: 45T (50%) - Halving epochs starting at 45T
+	•	Pioneer Epoch: 9T (10%)
+	•	Public Epoch: 18T (20%)
+	•	Ecosystem Epoch: 18T (20%)
+
+Epoch Qualification (based on density scores):
+	•	Founders: Density ≥ 8000
+	•	Pioneer: Density ≥ 6000
+	•	Public: Density ≥ 4000
+	•	Ecosystem: Density < 4000
+
+Reward Calculation:
+	•	PoD Score = (coherence/10000) × (density/10000) × (novelty/10000) × 10000
+	•	Reward = (PoD Score / 10000) × available epoch balance
+	•	PoD Score directly translates to percentage of available tokens in the qualified epoch
+	•	Example: PoD Score 7429 = 74.29% of available tokens in that epoch
+
+Halving Epochs: Founders epoch pool halves every 1M coherence density units (45T → 22.5T → 11.25T, etc.)
 
 Each epoch opens only after the previous epoch achieves minimum resonance density.
-
-Founder allocation adjusts dynamically based on coherence density, not fixed percentages.
 
 ⸻
 

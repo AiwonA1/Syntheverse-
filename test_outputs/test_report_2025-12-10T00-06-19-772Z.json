@@ -1,0 +1,1497 @@
+{
+  "metadata": {
+    "startTime": "2025-12-10T00:06:19.773Z",
+    "endTime": "2025-12-10T00:06:21.144Z",
+    "duration": 1.371,
+    "status": "SUCCESS",
+    "papersTested": 8
+  },
+  "summary": {
+    "totalErrors": 0,
+    "totalTransactions": 16,
+    "totalDiscoveries": 8,
+    "totalLogs": 177
+  },
+  "discoveries": [
+    {
+      "paper": "Syntheverse HHF-AI: Hydrogen-Holographic Fractal Awareness System",
+      "filename": "HHF-AI_Paper.pdF",
+      "discoveryId": "0x67c8e793a79cfd06a9cb1740746462678948b2e3fad16c4333b0b0c1ad15a921",
+      "scores": {
+        "coherence": 9200,
+        "density": 8500,
+        "novelty": 9500
+      },
+      "reward": "34281927467324550000000000000000"
+    },
+    {
+      "paper": "Syntheverse PoD: Hydrogen-Holographic Fractal Consensus",
+      "filename": "PoD_Protocol_Paper.pdf",
+      "discoveryId": "0xbc45ae8e42aaea0715ca4091bd2390d8dc3bb9e52919d3513f991ae51ebc0f8c",
+      "scores": {
+        "coherence": 8800,
+        "density": 9200,
+        "novelty": 9000
+      },
+      "reward": "8644226081407032870000000000000"
+    },
+    {
+      "paper": "HHF Validation Suite - Empirical Validation Framework",
+      "filename": "HHF_Validation_Suite.md",
+      "discoveryId": "0x065c12991cb9cf8c12082600b973ece370061d664625d8b6391c63f33671182e",
+      "scores": {
+        "coherence": 9000,
+        "density": 8350,
+        "novelty": 8450
+      },
+      "reward": "2044657258637944877550000000000"
+    },
+    {
+      "paper": "The Awarenessverse: Empirical Modeling and Predictions of Awareness as the Ultimate Energy",
+      "filename": "Awarenessverse_Paper.md",
+      "discoveryId": "0x7431e0f5b876c73f1519e74f31b0066950c1ce457c7a8c2fb05e51b614540dae",
+      "scores": {
+        "coherence": 9200,
+        "density": 8950,
+        "novelty": 9300
+      },
+      "reward": "22350164797152603700965000000"
+    },
+    {
+      "paper": "Octave Harmonics as Empirical Evidence of the Hydrogen Holographic Fractal Environment",
+      "filename": "Octave_Harmonics_Paper.md",
+      "discoveryId": "0x3da2a720a386743409f105f01cdea11c9fbe204824049824a3148b2cb3e456d7",
+      "scores": {
+        "coherence": 9300,
+        "density": 9050,
+        "novelty": 9200
+      },
+      "reward": "5295459251339404026377800500"
+    },
+    {
+      "paper": "Recursive Sourced Interference (RSI) in the Hydrogen‑Holographic Fractal Sandbox (HHFS)",
+      "filename": "RSI_HHFS_Paper.md",
+      "discoveryId": "0x05c05960682986ab5b92f79a291a0e90fb238d87a5a0c034634d128ff5b4e633",
+      "scores": {
+        "coherence": 9500,
+        "density": 9150,
+        "novelty": 9400
+      },
+      "reward": "1261095531477859938410931991"
+    },
+    {
+      "paper": "The Holographic Fractal Grammar: An Operational Linguistics of Fractal Cognitive Chemistry",
+      "filename": "HFG_Paper.md",
+      "discoveryId": "0x85d3ec90342f66b42e13797a3753c1b674ce2ef5789363e0cb9453089db09da2",
+      "scores": {
+        "coherence": 9600,
+        "density": 9350,
+        "novelty": 9500
+      },
+      "reward": "240864770163383505526792304"
+    },
+    {
+      "paper": "Introducing Fractal Cognitive Chemistry: From Fractal Awareness to Generative and AI Awareness",
+      "filename": "FCC_Paper.md",
+      "discoveryId": "0xf5a78d18ac88b91625b6b60b1c39cb1596e548d8593e8c54f1bafbb44eeb0676",
+      "scores": {
+        "coherence": 9400,
+        "density": 9250,
+        "novelty": 9400
+      },
+      "reward": "34006447521065745097427085"
+    }
+  ],
+  "errors": [],
+  "transactions": [
+    {
+      "timestamp": "2025-12-10T00:06:20.583Z",
+      "hash": "0xafd8c00757c685fa39adc475f68f1fbe2e00e1965fddc2f24b35c203d2943081",
+      "type": "Submit Discovery (Syntheverse HHF-AI: Hydrogen-Holographic Fractal Awareness System)",
+      "details": {
+        "discoverer": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+        "contentHash": "0xfc1d9d0fc1375791dfff5495439bbebc7333c35b557d6412a3c109d6e6abfe77",
+        "fractalHash": "0x22cf4aa62bb80006b920eb6bd5e7d626fd5ec4e8ed2dbf2d77d59a6a56eec530"
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.602Z",
+      "hash": "0xf3b493c639d5b9194574084d1694f8f6ef13fa5547ba9ddaded05aaabca19ff6",
+      "type": "Validate Discovery (Syntheverse HHF-AI: Hydrogen-Holographic Fractal Awareness System)",
+      "details": {
+        "discoveryId": "0x67c8e793a79cfd06a9cb1740746462678948b2e3fad16c4333b0b0c1ad15a921",
+        "scores": {
+          "coherence": 9200,
+          "density": 8500,
+          "novelty": 9500
+        }
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.632Z",
+      "hash": "0x2f5ef82c7c5036604401c9ebcfc2e11633b239e00562cb6b91993c628aae797e",
+      "type": "Submit Discovery (Syntheverse PoD: Hydrogen-Holographic Fractal Consensus)",
+      "details": {
+        "discoverer": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "contentHash": "0x471cfee4ae9faa8db35a92bd457444028a68643238658fc32b2faa22d399ea67",
+        "fractalHash": "0x9597430eb1a7423c05f2396e016503923c6ff7749a4e1168161dddbea60b142c"
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.643Z",
+      "hash": "0xbc31e9f4c37c5ef6171d8f09e3dac14da0497e9611fef525b738c9a7e2be9a4f",
+      "type": "Validate Discovery (Syntheverse PoD: Hydrogen-Holographic Fractal Consensus)",
+      "details": {
+        "discoveryId": "0xbc45ae8e42aaea0715ca4091bd2390d8dc3bb9e52919d3513f991ae51ebc0f8c",
+        "scores": {
+          "coherence": 8800,
+          "density": 9200,
+          "novelty": 9000
+        }
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.678Z",
+      "hash": "0x99e2c26ec442631196fa061b38d45a535fe5c7fac47909b34781a2c81def1f41",
+      "type": "Submit Discovery (HHF Validation Suite - Empirical Validation Framework)",
+      "details": {
+        "discoverer": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "contentHash": "0xd1e4502a60c10740878de34ec9b5751678ab052c066794a0099dc3400a7270e7",
+        "fractalHash": "0x8e778df576906deb2fef8d2c75166050af766f85ae8a464057a627baa47353a3"
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.692Z",
+      "hash": "0x1bd9545f7b3185090fd953584160189a076c2e688301ec9e13be2f9fc49da5f8",
+      "type": "Validate Discovery (HHF Validation Suite - Empirical Validation Framework)",
+      "details": {
+        "discoveryId": "0x065c12991cb9cf8c12082600b973ece370061d664625d8b6391c63f33671182e",
+        "scores": {
+          "coherence": 9000,
+          "density": 8350,
+          "novelty": 8450
+        }
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.726Z",
+      "hash": "0x17d2875b497857a584e6d9468096544c496d2a994a51f1367796979984b5dc14",
+      "type": "Submit Discovery (The Awarenessverse: Empirical Modeling and Predictions of Awareness as the Ultimate Energy)",
+      "details": {
+        "discoverer": "0x90F79bf6EB2c4f870365E785982E1f101E93b906",
+        "contentHash": "0xafc9d8ddac5894f98ebd287c03fd249844234bee808189bc3f067e6a25cc0629",
+        "fractalHash": "0x190beb39322b4c0212ae5caee5be14113d1ca91c3be49410777c204deaad1e9d"
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.744Z",
+      "hash": "0x6ad19117ed05e6c8fadf95d3b2c86dc3dcb6b917be213be88eb79ce802627963",
+      "type": "Validate Discovery (The Awarenessverse: Empirical Modeling and Predictions of Awareness as the Ultimate Energy)",
+      "details": {
+        "discoveryId": "0x7431e0f5b876c73f1519e74f31b0066950c1ce457c7a8c2fb05e51b614540dae",
+        "scores": {
+          "coherence": 9200,
+          "density": 8950,
+          "novelty": 9300
+        }
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.768Z",
+      "hash": "0x72d3a058d71a9ba341259f10189cecb59e91dcada14a59d726b94614cefb4010",
+      "type": "Submit Discovery (Octave Harmonics as Empirical Evidence of the Hydrogen Holographic Fractal Environment)",
+      "details": {
+        "discoverer": "0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65",
+        "contentHash": "0x884002e90ea2403d813c58ab4c05bfed630b2cfaf3222821044b476e3a516144",
+        "fractalHash": "0x10a7dc14e1a0cda5b3a993e05536f5a33e8251909f755ceadfee4a13f001aad8"
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.791Z",
+      "hash": "0xdbdeff99a71e66134197fbddeb7207faa94acf4d90de92c44b133f64b866acd7",
+      "type": "Validate Discovery (Octave Harmonics as Empirical Evidence of the Hydrogen Holographic Fractal Environment)",
+      "details": {
+        "discoveryId": "0x3da2a720a386743409f105f01cdea11c9fbe204824049824a3148b2cb3e456d7",
+        "scores": {
+          "coherence": 9300,
+          "density": 9050,
+          "novelty": 9200
+        }
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.818Z",
+      "hash": "0xb67c1ba0f242db26537e4a8572ad30f9bfd2156ed13ce9460bcaa56431343393",
+      "type": "Submit Discovery (Recursive Sourced Interference (RSI) in the Hydrogen‑Holographic Fractal Sandbox (HHFS))",
+      "details": {
+        "discoverer": "0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc",
+        "contentHash": "0xd7e1147ea4114c1f5a8bb92a819293866e0967260f7fbd513c10de9f48f99446",
+        "fractalHash": "0x3d628503a7cafe5a48996dedc9f88d1584add49758390062b41f9c5af9de2117"
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.040Z",
+      "hash": "0xabdf103f2c704eb4f1da2ae1b5e9310d923787fe73184b119b36bff0c69e4a82",
+      "type": "Validate Discovery (Recursive Sourced Interference (RSI) in the Hydrogen‑Holographic Fractal Sandbox (HHFS))",
+      "details": {
+        "discoveryId": "0x05c05960682986ab5b92f79a291a0e90fb238d87a5a0c034634d128ff5b4e633",
+        "scores": {
+          "coherence": 9500,
+          "density": 9150,
+          "novelty": 9400
+        }
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.065Z",
+      "hash": "0x4ac5629a8b0d4a7845e2941ba787d678b88e5be178013fed2b5213cb5266b346",
+      "type": "Submit Discovery (The Holographic Fractal Grammar: An Operational Linguistics of Fractal Cognitive Chemistry)",
+      "details": {
+        "discoverer": "0x976EA74026E726554dB657fA54763abd0C3a0aa9",
+        "contentHash": "0x63dc0ac4a20036543f413ec9d42299f2d18f563bf9852ca9f00f9bf34a7accf5",
+        "fractalHash": "0x32445f49ae045f50edc83c95ee768120fe460239d107daeeb6a789c0d9840813"
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.081Z",
+      "hash": "0x14b2f0218c42a5ec46854669e4bd4e39eca3b7ef97c8948ef0ec829e20db796a",
+      "type": "Validate Discovery (The Holographic Fractal Grammar: An Operational Linguistics of Fractal Cognitive Chemistry)",
+      "details": {
+        "discoveryId": "0x85d3ec90342f66b42e13797a3753c1b674ce2ef5789363e0cb9453089db09da2",
+        "scores": {
+          "coherence": 9600,
+          "density": 9350,
+          "novelty": 9500
+        }
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.105Z",
+      "hash": "0xfde5b5b4c07bd1ea91338c3ef9f3078e7e95a4cca3d23063e2180b93f144c08f",
+      "type": "Submit Discovery (Introducing Fractal Cognitive Chemistry: From Fractal Awareness to Generative and AI Awareness)",
+      "details": {
+        "discoverer": "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+        "contentHash": "0x976cbb67a5bd5e7deb418f2b3098ade92a1307380ce25c664266f60b2cf7cda1",
+        "fractalHash": "0x8d8cc70ecca9f452fead765f8d4bf7932464fa2748cbce72aeedba28caed72e6"
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.127Z",
+      "hash": "0x7c2b8f5f6c5dc049f08b280ea7a36c16d5ebd88cb239595e8dee11577a579517",
+      "type": "Validate Discovery (Introducing Fractal Cognitive Chemistry: From Fractal Awareness to Generative and AI Awareness)",
+      "details": {
+        "discoveryId": "0xf5a78d18ac88b91625b6b60b1c39cb1596e548d8593e8c54f1bafbb44eeb0676",
+        "scores": {
+          "coherence": 9400,
+          "density": 9250,
+          "novelty": 9400
+        }
+      }
+    }
+  ],
+  "logs": [
+    {
+      "timestamp": "2025-12-10T00:06:19.773Z",
+      "message": "╔══════════════════════════════════════════════════════════════╗",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:19.774Z",
+      "message": "║     Syntheverse Multiple Papers Discovery Test               ║",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:19.774Z",
+      "message": "╚══════════════════════════════════════════════════════════════╝",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:19.774Z",
+      "message": "",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:19.774Z",
+      "message": "✓ Loaded deployment addresses",
+      "data": {
+        "file": "/Users/macbook/Desktop/Syntheverse-/blockchain/deployments/deployment-localhost.json"
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.451Z",
+      "message": "Available signers: 20",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.451Z",
+      "message": "",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.554Z",
+      "message": "Contracts:",
+      "data": {
+        "Token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+        "PoD": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512"
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.554Z",
+      "message": "",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.554Z",
+      "message": "=== Initial State ===",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.561Z",
+      "message": "Current Epoch:",
+      "data": "Ecosystem"
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.564Z",
+      "message": "Initial Coherence Density:",
+      "data": "234310"
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.564Z",
+      "message": "",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.564Z",
+      "message": "Processing paper 1 of 8...",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.564Z",
+      "message": "=== Paper 1: Syntheverse HHF-AI: Hydrogen-Holographic Fractal Awareness System ===",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.564Z",
+      "message": "Filename: HHF-AI_Paper.pdF",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.564Z",
+      "message": "",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.565Z",
+      "message": "✓ Paper loaded",
+      "data": {
+        "length": 31,
+        "filename": "HHF-AI_Paper.pdF"
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.568Z",
+      "message": "⚠ Paper already submitted (content hash exists)",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.568Z",
+      "message": "   Using modified content for new submission...",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.583Z",
+      "message": "Transaction: Submit Discovery (Syntheverse HHF-AI: Hydrogen-Holographic Fractal Awareness System)",
+      "data": {
+        "hash": "0xafd8c00757c685fa39adc475f68f1fbe2e00e1965fddc2f24b35c203d2943081",
+        "details": {
+          "discoverer": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+          "contentHash": "0xfc1d9d0fc1375791dfff5495439bbebc7333c35b557d6412a3c109d6e6abfe77",
+          "fractalHash": "0x22cf4aa62bb80006b920eb6bd5e7d626fd5ec4e8ed2dbf2d77d59a6a56eec530"
+        }
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.591Z",
+      "message": "✓ Paper submitted (modified)",
+      "data": {
+        "discoveryId": "0x67c8e793a79cfd06a9cb1740746462678948b2e3fad16c4333b0b0c1ad15a921"
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.591Z",
+      "message": "Validating discovery...",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.602Z",
+      "message": "Transaction: Validate Discovery (Syntheverse HHF-AI: Hydrogen-Holographic Fractal Awareness System)",
+      "data": {
+        "hash": "0xf3b493c639d5b9194574084d1694f8f6ef13fa5547ba9ddaded05aaabca19ff6",
+        "details": {
+          "discoveryId": "0x67c8e793a79cfd06a9cb1740746462678948b2e3fad16c4333b0b0c1ad15a921",
+          "scores": {
+            "coherence": 9200,
+            "density": 8500,
+            "novelty": 9500
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.605Z",
+      "message": "✓ Validation transaction confirmed",
+      "data": {
+        "blockNumber": 14,
+        "gasUsed": "187456"
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.610Z",
+      "message": "✓ Discovery validated!",
+      "data": {
+        "validated": true,
+        "coherenceScore": "9200",
+        "densityScore": "8500",
+        "noveltyScore": "9500"
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.614Z",
+      "message": "Token Balance:",
+      "data": {
+        "address": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+        "balance": "34281927467324.55 SYNTH"
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.614Z",
+      "message": "",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.614Z",
+      "message": "",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.614Z",
+      "message": "Processing paper 2 of 8...",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.614Z",
+      "message": "=== Paper 2: Syntheverse PoD: Hydrogen-Holographic Fractal Consensus ===",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.614Z",
+      "message": "Filename: PoD_Protocol_Paper.pdf",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.614Z",
+      "message": "",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.614Z",
+      "message": "✓ Paper loaded",
+      "data": {
+        "length": 37,
+        "filename": "PoD_Protocol_Paper.pdf"
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.617Z",
+      "message": "⚠ Paper already submitted (content hash exists)",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.617Z",
+      "message": "   Using modified content for new submission...",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.632Z",
+      "message": "Transaction: Submit Discovery (Syntheverse PoD: Hydrogen-Holographic Fractal Consensus)",
+      "data": {
+        "hash": "0x2f5ef82c7c5036604401c9ebcfc2e11633b239e00562cb6b91993c628aae797e",
+        "details": {
+          "discoverer": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+          "contentHash": "0x471cfee4ae9faa8db35a92bd457444028a68643238658fc32b2faa22d399ea67",
+          "fractalHash": "0x9597430eb1a7423c05f2396e016503923c6ff7749a4e1168161dddbea60b142c"
+        }
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.634Z",
+      "message": "✓ Paper submitted (modified)",
+      "data": {
+        "discoveryId": "0xbc45ae8e42aaea0715ca4091bd2390d8dc3bb9e52919d3513f991ae51ebc0f8c"
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.635Z",
+      "message": "Validating discovery...",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.643Z",
+      "message": "Transaction: Validate Discovery (Syntheverse PoD: Hydrogen-Holographic Fractal Consensus)",
+      "data": {
+        "hash": "0xbc31e9f4c37c5ef6171d8f09e3dac14da0497e9611fef525b738c9a7e2be9a4f",
+        "details": {
+          "discoveryId": "0xbc45ae8e42aaea0715ca4091bd2390d8dc3bb9e52919d3513f991ae51ebc0f8c",
+          "scores": {
+            "coherence": 8800,
+            "density": 9200,
+            "novelty": 9000
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.646Z",
+      "message": "✓ Validation transaction confirmed",
+      "data": {
+        "blockNumber": 16,
+        "gasUsed": "187456"
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.650Z",
+      "message": "✓ Discovery validated!",
+      "data": {
+        "validated": true,
+        "coherenceScore": "8800",
+        "densityScore": "9200",
+        "noveltyScore": "9000"
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.659Z",
+      "message": "Token Balance:",
+      "data": {
+        "address": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "balance": "8644226081407.03287 SYNTH"
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.660Z",
+      "message": "",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.660Z",
+      "message": "",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.660Z",
+      "message": "Processing paper 3 of 8...",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.660Z",
+      "message": "=== Paper 3: HHF Validation Suite - Empirical Validation Framework ===",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.660Z",
+      "message": "Filename: HHF_Validation_Suite.md",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.660Z",
+      "message": "",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.662Z",
+      "message": "✓ Paper loaded",
+      "data": {
+        "length": 4164,
+        "filename": "HHF_Validation_Suite.md"
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.669Z",
+      "message": "⚠ Paper already submitted (content hash exists)",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.669Z",
+      "message": "   Using modified content for new submission...",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.681Z",
+      "message": "Transaction: Submit Discovery (HHF Validation Suite - Empirical Validation Framework)",
+      "data": {
+        "hash": "0x99e2c26ec442631196fa061b38d45a535fe5c7fac47909b34781a2c81def1f41",
+        "details": {
+          "discoverer": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+          "contentHash": "0xd1e4502a60c10740878de34ec9b5751678ab052c066794a0099dc3400a7270e7",
+          "fractalHash": "0x8e778df576906deb2fef8d2c75166050af766f85ae8a464057a627baa47353a3"
+        }
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.683Z",
+      "message": "✓ Paper submitted (modified)",
+      "data": {
+        "discoveryId": "0x065c12991cb9cf8c12082600b973ece370061d664625d8b6391c63f33671182e"
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.683Z",
+      "message": "Validating discovery...",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.692Z",
+      "message": "Transaction: Validate Discovery (HHF Validation Suite - Empirical Validation Framework)",
+      "data": {
+        "hash": "0x1bd9545f7b3185090fd953584160189a076c2e688301ec9e13be2f9fc49da5f8",
+        "details": {
+          "discoveryId": "0x065c12991cb9cf8c12082600b973ece370061d664625d8b6391c63f33671182e",
+          "scores": {
+            "coherence": 9000,
+            "density": 8350,
+            "novelty": 8450
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.695Z",
+      "message": "✓ Validation transaction confirmed",
+      "data": {
+        "blockNumber": 18,
+        "gasUsed": "187444"
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.700Z",
+      "message": "✓ Discovery validated!",
+      "data": {
+        "validated": true,
+        "coherenceScore": "9000",
+        "densityScore": "8350",
+        "noveltyScore": "8450"
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.703Z",
+      "message": "Token Balance:",
+      "data": {
+        "address": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "balance": "2044657258637.94487755 SYNTH"
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.703Z",
+      "message": "",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.703Z",
+      "message": "",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.703Z",
+      "message": "Processing paper 4 of 8...",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.704Z",
+      "message": "=== Paper 4: The Awarenessverse: Empirical Modeling and Predictions of Awareness as the Ultimate Energy ===",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.704Z",
+      "message": "Filename: Awarenessverse_Paper.md",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.704Z",
+      "message": "",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.705Z",
+      "message": "✓ Paper loaded",
+      "data": {
+        "length": 5461,
+        "filename": "Awarenessverse_Paper.md"
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.711Z",
+      "message": "Submitting paper as discovery...",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.726Z",
+      "message": "Transaction: Submit Discovery (The Awarenessverse: Empirical Modeling and Predictions of Awareness as the Ultimate Energy)",
+      "data": {
+        "hash": "0x17d2875b497857a584e6d9468096544c496d2a994a51f1367796979984b5dc14",
+        "details": {
+          "discoverer": "0x90F79bf6EB2c4f870365E785982E1f101E93b906",
+          "contentHash": "0xafc9d8ddac5894f98ebd287c03fd249844234bee808189bc3f067e6a25cc0629",
+          "fractalHash": "0x190beb39322b4c0212ae5caee5be14113d1ca91c3be49410777c204deaad1e9d"
+        }
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.727Z",
+      "message": "✓ Transaction confirmed",
+      "data": {
+        "blockNumber": 19,
+        "gasUsed": "179800"
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.728Z",
+      "message": "✓ Paper submitted!",
+      "data": {
+        "discoveryId": "0x7431e0f5b876c73f1519e74f31b0066950c1ce457c7a8c2fb05e51b614540dae",
+        "contentHash": "0xafc9d8ddac5894f98ebd287c03fd249844234bee808189bc3f067e6a25cc0629",
+        "fractalHash": "0x190beb39322b4c0212ae5caee5be14113d1ca91c3be49410777c204deaad1e9d"
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.728Z",
+      "message": "",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.728Z",
+      "message": "Calculated Scores:",
+      "data": {
+        "coherence": 9200,
+        "density": 8950,
+        "novelty": 9300
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.733Z",
+      "message": "  Qualified Epoch (based on density): Founders",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.734Z",
+      "message": "",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.734Z",
+      "message": "Validating discovery...",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.744Z",
+      "message": "Transaction: Validate Discovery (The Awarenessverse: Empirical Modeling and Predictions of Awareness as the Ultimate Energy)",
+      "data": {
+        "hash": "0x6ad19117ed05e6c8fadf95d3b2c86dc3dcb6b917be213be88eb79ce802627963",
+        "details": {
+          "discoveryId": "0x7431e0f5b876c73f1519e74f31b0066950c1ce457c7a8c2fb05e51b614540dae",
+          "scores": {
+            "coherence": 9200,
+            "density": 8950,
+            "novelty": 9300
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.750Z",
+      "message": "✓ Validation transaction confirmed",
+      "data": {
+        "blockNumber": 20,
+        "gasUsed": "204556"
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.752Z",
+      "message": "✓ Discovery validated!",
+      "data": {
+        "validated": true,
+        "coherenceScore": "9200",
+        "densityScore": "8950",
+        "noveltyScore": "9300"
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.755Z",
+      "message": "Token Balance:",
+      "data": {
+        "address": "0x90F79bf6EB2c4f870365E785982E1f101E93b906",
+        "balance": "22350164797.152603700965 SYNTH"
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.755Z",
+      "message": "",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.756Z",
+      "message": "",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.756Z",
+      "message": "Processing paper 5 of 8...",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.756Z",
+      "message": "=== Paper 5: Octave Harmonics as Empirical Evidence of the Hydrogen Holographic Fractal Environment ===",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.756Z",
+      "message": "Filename: Octave_Harmonics_Paper.md",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.756Z",
+      "message": "",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.757Z",
+      "message": "✓ Paper loaded",
+      "data": {
+        "length": 5613,
+        "filename": "Octave_Harmonics_Paper.md"
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.761Z",
+      "message": "Submitting paper as discovery...",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.768Z",
+      "message": "Transaction: Submit Discovery (Octave Harmonics as Empirical Evidence of the Hydrogen Holographic Fractal Environment)",
+      "data": {
+        "hash": "0x72d3a058d71a9ba341259f10189cecb59e91dcada14a59d726b94614cefb4010",
+        "details": {
+          "discoverer": "0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65",
+          "contentHash": "0x884002e90ea2403d813c58ab4c05bfed630b2cfaf3222821044b476e3a516144",
+          "fractalHash": "0x10a7dc14e1a0cda5b3a993e05536f5a33e8251909f755ceadfee4a13f001aad8"
+        }
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.773Z",
+      "message": "✓ Transaction confirmed",
+      "data": {
+        "blockNumber": 21,
+        "gasUsed": "179800"
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.774Z",
+      "message": "✓ Paper submitted!",
+      "data": {
+        "discoveryId": "0x3da2a720a386743409f105f01cdea11c9fbe204824049824a3148b2cb3e456d7",
+        "contentHash": "0x884002e90ea2403d813c58ab4c05bfed630b2cfaf3222821044b476e3a516144",
+        "fractalHash": "0x10a7dc14e1a0cda5b3a993e05536f5a33e8251909f755ceadfee4a13f001aad8"
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.775Z",
+      "message": "",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.775Z",
+      "message": "Calculated Scores:",
+      "data": {
+        "coherence": 9300,
+        "density": 9050,
+        "novelty": 9200
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.777Z",
+      "message": "  Qualified Epoch (based on density): Founders",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.778Z",
+      "message": "",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.778Z",
+      "message": "Validating discovery...",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.791Z",
+      "message": "Transaction: Validate Discovery (Octave Harmonics as Empirical Evidence of the Hydrogen Holographic Fractal Environment)",
+      "data": {
+        "hash": "0xdbdeff99a71e66134197fbddeb7207faa94acf4d90de92c44b133f64b866acd7",
+        "details": {
+          "discoveryId": "0x3da2a720a386743409f105f01cdea11c9fbe204824049824a3148b2cb3e456d7",
+          "scores": {
+            "coherence": 9300,
+            "density": 9050,
+            "novelty": 9200
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.794Z",
+      "message": "✓ Validation transaction confirmed",
+      "data": {
+        "blockNumber": 22,
+        "gasUsed": "204556"
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.800Z",
+      "message": "✓ Discovery validated!",
+      "data": {
+        "validated": true,
+        "coherenceScore": "9300",
+        "densityScore": "9050",
+        "noveltyScore": "9200"
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.802Z",
+      "message": "Token Balance:",
+      "data": {
+        "address": "0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65",
+        "balance": "5295459251.3394040263778005 SYNTH"
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.802Z",
+      "message": "",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.802Z",
+      "message": "",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.802Z",
+      "message": "Processing paper 6 of 8...",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.802Z",
+      "message": "=== Paper 6: Recursive Sourced Interference (RSI) in the Hydrogen‑Holographic Fractal Sandbox (HHFS) ===",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.802Z",
+      "message": "Filename: RSI_HHFS_Paper.md",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.802Z",
+      "message": "",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.804Z",
+      "message": "✓ Paper loaded",
+      "data": {
+        "length": 8742,
+        "filename": "RSI_HHFS_Paper.md"
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.810Z",
+      "message": "Submitting paper as discovery...",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.818Z",
+      "message": "Transaction: Submit Discovery (Recursive Sourced Interference (RSI) in the Hydrogen‑Holographic Fractal Sandbox (HHFS))",
+      "data": {
+        "hash": "0xb67c1ba0f242db26537e4a8572ad30f9bfd2156ed13ce9460bcaa56431343393",
+        "details": {
+          "discoverer": "0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc",
+          "contentHash": "0xd7e1147ea4114c1f5a8bb92a819293866e0967260f7fbd513c10de9f48f99446",
+          "fractalHash": "0x3d628503a7cafe5a48996dedc9f88d1584add49758390062b41f9c5af9de2117"
+        }
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:20.820Z",
+      "message": "✓ Transaction confirmed",
+      "data": {
+        "blockNumber": 23,
+        "gasUsed": "179788"
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.008Z",
+      "message": "✓ Paper submitted!",
+      "data": {
+        "discoveryId": "0x05c05960682986ab5b92f79a291a0e90fb238d87a5a0c034634d128ff5b4e633",
+        "contentHash": "0xd7e1147ea4114c1f5a8bb92a819293866e0967260f7fbd513c10de9f48f99446",
+        "fractalHash": "0x3d628503a7cafe5a48996dedc9f88d1584add49758390062b41f9c5af9de2117"
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.011Z",
+      "message": "",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.023Z",
+      "message": "Calculated Scores:",
+      "data": {
+        "coherence": 9500,
+        "density": 9150,
+        "novelty": 9400
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.026Z",
+      "message": "  Qualified Epoch (based on density): Founders",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.026Z",
+      "message": "",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.027Z",
+      "message": "Validating discovery...",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.040Z",
+      "message": "Transaction: Validate Discovery (Recursive Sourced Interference (RSI) in the Hydrogen‑Holographic Fractal Sandbox (HHFS))",
+      "data": {
+        "hash": "0xabdf103f2c704eb4f1da2ae1b5e9310d923787fe73184b119b36bff0c69e4a82",
+        "details": {
+          "discoveryId": "0x05c05960682986ab5b92f79a291a0e90fb238d87a5a0c034634d128ff5b4e633",
+          "scores": {
+            "coherence": 9500,
+            "density": 9150,
+            "novelty": 9400
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.043Z",
+      "message": "✓ Validation transaction confirmed",
+      "data": {
+        "blockNumber": 24,
+        "gasUsed": "204556"
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.047Z",
+      "message": "✓ Discovery validated!",
+      "data": {
+        "validated": true,
+        "coherenceScore": "9500",
+        "densityScore": "9150",
+        "noveltyScore": "9400"
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.051Z",
+      "message": "Token Balance:",
+      "data": {
+        "address": "0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc",
+        "balance": "1261095531.477859938410931991 SYNTH"
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.051Z",
+      "message": "",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.052Z",
+      "message": "",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.052Z",
+      "message": "Processing paper 7 of 8...",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.052Z",
+      "message": "=== Paper 7: The Holographic Fractal Grammar: An Operational Linguistics of Fractal Cognitive Chemistry ===",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.052Z",
+      "message": "Filename: HFG_Paper.md",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.052Z",
+      "message": "",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.053Z",
+      "message": "✓ Paper loaded",
+      "data": {
+        "length": 7914,
+        "filename": "HFG_Paper.md"
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.058Z",
+      "message": "Submitting paper as discovery...",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.065Z",
+      "message": "Transaction: Submit Discovery (The Holographic Fractal Grammar: An Operational Linguistics of Fractal Cognitive Chemistry)",
+      "data": {
+        "hash": "0x4ac5629a8b0d4a7845e2941ba787d678b88e5be178013fed2b5213cb5266b346",
+        "details": {
+          "discoverer": "0x976EA74026E726554dB657fA54763abd0C3a0aa9",
+          "contentHash": "0x63dc0ac4a20036543f413ec9d42299f2d18f563bf9852ca9f00f9bf34a7accf5",
+          "fractalHash": "0x32445f49ae045f50edc83c95ee768120fe460239d107daeeb6a789c0d9840813"
+        }
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.068Z",
+      "message": "✓ Transaction confirmed",
+      "data": {
+        "blockNumber": 25,
+        "gasUsed": "179788"
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.068Z",
+      "message": "✓ Paper submitted!",
+      "data": {
+        "discoveryId": "0x85d3ec90342f66b42e13797a3753c1b674ce2ef5789363e0cb9453089db09da2",
+        "contentHash": "0x63dc0ac4a20036543f413ec9d42299f2d18f563bf9852ca9f00f9bf34a7accf5",
+        "fractalHash": "0x32445f49ae045f50edc83c95ee768120fe460239d107daeeb6a789c0d9840813"
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.068Z",
+      "message": "",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.069Z",
+      "message": "Calculated Scores:",
+      "data": {
+        "coherence": 9600,
+        "density": 9350,
+        "novelty": 9500
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.072Z",
+      "message": "  Qualified Epoch (based on density): Founders",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.072Z",
+      "message": "",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.072Z",
+      "message": "Validating discovery...",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.081Z",
+      "message": "Transaction: Validate Discovery (The Holographic Fractal Grammar: An Operational Linguistics of Fractal Cognitive Chemistry)",
+      "data": {
+        "hash": "0x14b2f0218c42a5ec46854669e4bd4e39eca3b7ef97c8948ef0ec829e20db796a",
+        "details": {
+          "discoveryId": "0x85d3ec90342f66b42e13797a3753c1b674ce2ef5789363e0cb9453089db09da2",
+          "scores": {
+            "coherence": 9600,
+            "density": 9350,
+            "novelty": 9500
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.083Z",
+      "message": "✓ Validation transaction confirmed",
+      "data": {
+        "blockNumber": 26,
+        "gasUsed": "204556"
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.086Z",
+      "message": "✓ Discovery validated!",
+      "data": {
+        "validated": true,
+        "coherenceScore": "9600",
+        "densityScore": "9350",
+        "noveltyScore": "9500"
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.090Z",
+      "message": "Token Balance:",
+      "data": {
+        "address": "0x976EA74026E726554dB657fA54763abd0C3a0aa9",
+        "balance": "240864770.163383505526792304 SYNTH"
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.090Z",
+      "message": "",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.090Z",
+      "message": "",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.090Z",
+      "message": "Processing paper 8 of 8...",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.090Z",
+      "message": "=== Paper 8: Introducing Fractal Cognitive Chemistry: From Fractal Awareness to Generative and AI Awareness ===",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.090Z",
+      "message": "Filename: FCC_Paper.md",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.090Z",
+      "message": "",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.091Z",
+      "message": "✓ Paper loaded",
+      "data": {
+        "length": 8378,
+        "filename": "FCC_Paper.md"
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.098Z",
+      "message": "Submitting paper as discovery...",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.105Z",
+      "message": "Transaction: Submit Discovery (Introducing Fractal Cognitive Chemistry: From Fractal Awareness to Generative and AI Awareness)",
+      "data": {
+        "hash": "0xfde5b5b4c07bd1ea91338c3ef9f3078e7e95a4cca3d23063e2180b93f144c08f",
+        "details": {
+          "discoverer": "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+          "contentHash": "0x976cbb67a5bd5e7deb418f2b3098ade92a1307380ce25c664266f60b2cf7cda1",
+          "fractalHash": "0x8d8cc70ecca9f452fead765f8d4bf7932464fa2748cbce72aeedba28caed72e6"
+        }
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.107Z",
+      "message": "✓ Transaction confirmed",
+      "data": {
+        "blockNumber": 27,
+        "gasUsed": "179800"
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.108Z",
+      "message": "✓ Paper submitted!",
+      "data": {
+        "discoveryId": "0xf5a78d18ac88b91625b6b60b1c39cb1596e548d8593e8c54f1bafbb44eeb0676",
+        "contentHash": "0x976cbb67a5bd5e7deb418f2b3098ade92a1307380ce25c664266f60b2cf7cda1",
+        "fractalHash": "0x8d8cc70ecca9f452fead765f8d4bf7932464fa2748cbce72aeedba28caed72e6"
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.108Z",
+      "message": "",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.108Z",
+      "message": "Calculated Scores:",
+      "data": {
+        "coherence": 9400,
+        "density": 9250,
+        "novelty": 9400
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.111Z",
+      "message": "  Qualified Epoch (based on density): Founders",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.111Z",
+      "message": "",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.111Z",
+      "message": "Validating discovery...",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.127Z",
+      "message": "Transaction: Validate Discovery (Introducing Fractal Cognitive Chemistry: From Fractal Awareness to Generative and AI Awareness)",
+      "data": {
+        "hash": "0x7c2b8f5f6c5dc049f08b280ea7a36c16d5ebd88cb239595e8dee11577a579517",
+        "details": {
+          "discoveryId": "0xf5a78d18ac88b91625b6b60b1c39cb1596e548d8593e8c54f1bafbb44eeb0676",
+          "scores": {
+            "coherence": 9400,
+            "density": 9250,
+            "novelty": 9400
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.129Z",
+      "message": "✓ Validation transaction confirmed",
+      "data": {
+        "blockNumber": 28,
+        "gasUsed": "204556"
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.133Z",
+      "message": "✓ Discovery validated!",
+      "data": {
+        "validated": true,
+        "coherenceScore": "9400",
+        "densityScore": "9250",
+        "noveltyScore": "9400"
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.136Z",
+      "message": "Token Balance:",
+      "data": {
+        "address": "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+        "balance": "34006447.521065745097427085 SYNTH"
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.136Z",
+      "message": "",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.136Z",
+      "message": "",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.136Z",
+      "message": "=== Final Summary ===",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.143Z",
+      "message": "Final State:",
+      "data": {
+        "epoch": "Ecosystem",
+        "coherenceDensity": "898760",
+        "totalDiscoveries": "11"
+      }
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.143Z",
+      "message": "",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.143Z",
+      "message": "=== Test Summary ===",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.143Z",
+      "message": "✓ Processed 8 papers",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.143Z",
+      "message": "✓ Total discoveries: 11",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.143Z",
+      "message": "✓ Coherence density: 898760",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.143Z",
+      "message": "✓ Current epoch: Ecosystem",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.143Z",
+      "message": "",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.143Z",
+      "message": "=== Conclusions ===",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.143Z",
+      "message": "✅ All papers were successfully processed",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.143Z",
+      "message": "✅ Discovery count is correct",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.144Z",
+      "message": "✅ Coherence density was successfully updated",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.144Z",
+      "message": "✅ OVERALL TEST: SUCCESS - All systems functioning correctly",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.144Z",
+      "message": "",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-10T00:06:21.145Z",
+      "message": "Report saved to: /Users/macbook/Desktop/Syntheverse-/test_outputs/test_report_2025-12-10T00-06-19-772Z.txt",
+      "data": null
+    }
+  ]
+}

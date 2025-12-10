@@ -1,0 +1,94 @@
+{
+  "metadata": {
+    "startTime": "2025-12-09T23:58:54.869Z",
+    "endTime": "2025-12-09T23:58:55.665Z",
+    "duration": 0.796,
+    "status": "FAILED",
+    "papersTested": 3
+  },
+  "summary": {
+    "totalErrors": 1,
+    "totalTransactions": 0,
+    "totalDiscoveries": 0,
+    "totalLogs": 12
+  },
+  "discoveries": [],
+  "errors": [
+    {
+      "timestamp": "2025-12-09T23:58:55.630Z",
+      "error": "could not decode result data (value=\"0x\", info={ \"method\": \"currentEpoch\", \"signature\": \"currentEpoch()\" }, code=BAD_DATA, version=6.16.0)",
+      "context": "Test execution",
+      "stack": "Error: could not decode result data (value=\"0x\", info={ \"method\": \"currentEpoch\", \"signature\": \"currentEpoch()\" }, code=BAD_DATA, version=6.16.0)\n    at makeError (/Users/macbook/Desktop/Syntheverse-/node_modules/ethers/src.ts/utils/errors.ts:698:21)\n    at assert (/Users/macbook/Desktop/Syntheverse-/node_modules/ethers/src.ts/utils/errors.ts:719:25)\n    at Interface.decodeFunctionResult (/Users/macbook/Desktop/Syntheverse-/node_modules/ethers/src.ts/abi/interface.ts:916:15)\n    at staticCallResult (/Users/macbook/Desktop/Syntheverse-/node_modules/ethers/src.ts/contract/contract.ts:346:35)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at staticCall (/Users/macbook/Desktop/Syntheverse-/node_modules/ethers/src.ts/contract/contract.ts:303:24)\n    at Proxy.currentEpoch (/Users/macbook/Desktop/Syntheverse-/node_modules/ethers/src.ts/contract/contract.ts:351:41)\n    at main (/Users/macbook/Desktop/Syntheverse-/blockchain/scripts/test_multiple_papers.js:503:26)"
+    }
+  ],
+  "transactions": [],
+  "logs": [
+    {
+      "timestamp": "2025-12-09T23:58:54.870Z",
+      "message": "╔══════════════════════════════════════════════════════════════╗",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-09T23:58:54.871Z",
+      "message": "║     Syntheverse Multiple Papers Discovery Test               ║",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-09T23:58:54.871Z",
+      "message": "╚══════════════════════════════════════════════════════════════╝",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-09T23:58:54.871Z",
+      "message": "",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-09T23:58:54.872Z",
+      "message": "✓ Loaded deployment addresses",
+      "data": {
+        "file": "/Users/macbook/Desktop/Syntheverse-/blockchain/deployments/deployment-localhost.json"
+      }
+    },
+    {
+      "timestamp": "2025-12-09T23:58:55.525Z",
+      "message": "Available signers: 20",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-09T23:58:55.525Z",
+      "message": "",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-09T23:58:55.603Z",
+      "message": "Contracts:",
+      "data": {
+        "Token": "0x809d550fca64d94Bd9F66E60752A544199cfAC3D",
+        "PoD": "0x4c5859f0F772848b2D91F1D83E2Fe57935348029"
+      }
+    },
+    {
+      "timestamp": "2025-12-09T23:58:55.603Z",
+      "message": "",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-09T23:58:55.603Z",
+      "message": "=== Initial State ===",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-09T23:58:55.662Z",
+      "message": "ERROR: could not decode result data (value=\"0x\", info={ \"method\": \"currentEpoch\", \"signature\": \"currentEpoch()\" }, code=BAD_DATA, version=6.16.0)",
+      "data": {
+        "context": "Test execution"
+      }
+    },
+    {
+      "timestamp": "2025-12-09T23:58:55.667Z",
+      "message": "Report saved to: /Users/macbook/Desktop/Syntheverse-/test_outputs/test_report_2025-12-09T23-58-54-869Z.txt",
+      "data": null
+    }
+  ]
+}

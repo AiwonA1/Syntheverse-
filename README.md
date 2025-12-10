@@ -6,7 +6,22 @@ Hydrogen-Holographic Fractal Intelligence System (HHF-AI) & Proof-of-Discovery B
 
 ## Test Environment & Validation
 
-Syntheverse includes a complete L1 blockchain test environment that validates the Proof-of-Discovery protocol using real research papers. The test environment runs on a local Hardhat blockchain network (free, no external dependencies required) and demonstrates the full discovery lifecycle: researchers submit knowledge contributions (in this case, the HHF-AI and PoD Protocol research papers from the `docs/` folder), the system computes semantic and fractal hashes to prevent redundancy, AI evaluation scores each discovery on coherence (structural consistency), density (informational richness), and novelty (uniqueness relative to existing knowledge), discoveries automatically qualify for specific epochs (Founders, Pioneer, Public, Ecosystem) based on their density scores, validated discoveries receive token rewards from epoch-specific pools where PoD Score directly translates to a percentage of available tokens, and the system tracks total coherence density to automatically advance through distribution epochs. Each test run generates comprehensive reports in `test_outputs/` including all transaction hashes, gas usage, validation scores, epoch qualifications, token distributions, and success/failure conclusions in both human-readable text and machine-parseable JSON formats. This test environment serves as both a validation framework for the protocol design and a demonstration of how knowledge discovery can be cryptographically valued and rewarded on-chain.
+Syntheverse includes a complete L1 blockchain test environment that validates the Proof-of-Discovery protocol using real research papers. The test environment runs on a local Hardhat blockchain network (free, no external dependencies required) and demonstrates the full discovery lifecycle: researchers submit knowledge contributions (8 research papers from the `docs/` folder), the system computes semantic and fractal hashes to prevent redundancy, AI evaluation scores each discovery on coherence (structural consistency), density (informational richness), and novelty (uniqueness relative to existing knowledge), discoveries automatically qualify for specific epochs (Founders, Pioneer, Public, Ecosystem) based on their density scores, validated discoveries receive token rewards from epoch-specific pools where PoD Score directly translates to a percentage of available tokens, and the system tracks total coherence density to automatically advance through distribution epochs. Each test run generates comprehensive reports in `test_outputs/` including all transaction hashes, gas usage, validation scores, epoch qualifications, token distributions, and success/failure conclusions in both human-readable text and machine-parseable JSON formats. This test environment serves as both a validation framework for the protocol design and a demonstration of how knowledge discovery can be cryptographically valued and rewarded on-chain.
+
+### Research Papers Validated
+
+The system has been tested with 8 research papers, all successfully validated:
+
+1. **Syntheverse HHF-AI: Hydrogen-Holographic Fractal Awareness System** - Density: 8,500, PoD Score: 7,429
+2. **Syntheverse PoD: Hydrogen-Holographic Fractal Consensus** - Density: 9,200, PoD Score: 7,286
+3. **HHF Validation Suite - Empirical Validation Framework** - Density: 8,350, PoD Score: 6,350
+4. **The Awarenessverse: Empirical Modeling and Predictions of Awareness as the Ultimate Energy** - Density: 8,950, PoD Score: 7,657
+5. **Octave Harmonics as Empirical Evidence of the Hydrogen Holographic Fractal Environment** - Density: 9,050, PoD Score: 7,743
+6. **Recursive Sourced Interference (RSI) in the Hydrogen‑Holographic Fractal Sandbox (HHFS)** - Density: 9,150, PoD Score: 8,170
+7. **The Holographic Fractal Grammar: An Operational Linguistics of Fractal Cognitive Chemistry** - Density: 9,350, PoD Score: 8,527 ⭐
+8. **Introducing Fractal Cognitive Chemistry: From Fractal Awareness to Generative and AI Awareness** - Density: 9,250, PoD Score: 8,173
+
+**Test Results:** All 8 papers qualified for the Founders Epoch (Density ≥ 8,000), demonstrating high-quality research contributions. See [PAPER_DISCOVERY_SUMMARY.md](./test_outputs/PAPER_DISCOVERY_SUMMARY.md) for detailed results.
 
 ⸻
 
@@ -223,19 +238,25 @@ Syntheverse AI is now integrated with an L1 blockchain test environment!
 - 📖 **[TEST_ENVIRONMENT_GUIDE.md](./TEST_ENVIRONMENT_GUIDE.md)** - Complete guide to the test environment
 - 🚀 **[QUICKSTART.md](./QUICKSTART.md)** - Quick setup instructions
 - 🔧 **[blockchain/README.md](./blockchain/README.md)** - Technical documentation
+- 📊 **[PAPER_DISCOVERY_SUMMARY.md](./test_outputs/PAPER_DISCOVERY_SUMMARY.md)** - Test results with 8 research papers
+- 💾 **[PERSISTENCE_GUIDE.md](./PERSISTENCE_GUIDE.md)** - Blockchain persistence configuration guide
 
 **What's Included:**
 - ✅ SyntheverseToken (ERC20) with multi-epoch distribution
 - ✅ Proof-of-Discovery protocol (Layer-2)
 - ✅ AI Integration bridge for HHF-AI
-- ✅ Complete test suite
+- ✅ Complete test suite with 8 validated research papers
 - ✅ Local Hardhat network (free test environment)
-- ✅ Sepolia testnet support
+- ✅ Sepolia testnet support (see [SEPOLIA_DEPLOYMENT.md](./SEPOLIA_DEPLOYMENT.md))
 - ✅ Example scripts and usage patterns
+- ✅ Redundancy detection and validation
+- ✅ Comprehensive test reporting
 
 **Project Structure:**
 - `blockchain/` - Smart contracts, deployment scripts, tests
 - `hhf-ai/integration/` - Python bridge for AI-blockchain integration
+- `docs/` - Research papers (8 papers validated)
+- `test_outputs/` - Test reports and discovery summaries
 - `TEST_ENVIRONMENT_GUIDE.md` - Comprehensive usage guide
 
 ⸻
@@ -243,5 +264,13 @@ Syntheverse AI is now integrated with an L1 blockchain test environment!
 10. Status
 
 Current Version: Genesis v0.1
-State: Early research + architecture + protocol design + **Blockchain implementation (testnet ready)**
+State: Early research + architecture + protocol design + **Blockchain implementation (testnet ready) + 8 papers validated**
 Maintainer: Pru "El Taíno" Méndez
+
+**Recent Updates:**
+- ✅ 8 research papers added and validated through Proof-of-Discovery protocol
+- ✅ All papers qualified for Founders Epoch (Density ≥ 8,000)
+- ✅ Comprehensive test reporting and discovery summaries
+- ✅ Redundancy detection system verified
+- ✅ Token allocation and epoch progression tested
+- ✅ Persistence guide added for blockchain state management

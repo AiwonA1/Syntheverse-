@@ -310,3 +310,4 @@ if __name__ == "__main__":
     print(f"Novelty: {novelty}")
     print(f"Analysis: {analysis}")
 
+

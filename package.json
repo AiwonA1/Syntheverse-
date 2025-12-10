@@ -8,8 +8,11 @@
     "test": "hardhat test",
     "node": "hardhat node",
     "deploy:local": "hardhat run blockchain/scripts/deploy.js --network localhost",
-    "deploy:testnet": "hardhat run scripts/deploy.js --network sepolia",
-    "verify": "hardhat verify"
+    "deploy:sepolia": "hardhat run blockchain/scripts/deploy.js --network sepolia",
+    "check:sepolia": "hardhat run blockchain/scripts/check_balance.js --network sepolia",
+    "verify": "hardhat verify",
+    "test:papers": "hardhat run blockchain/scripts/test_with_papers.js --network localhost",
+    "test:multiple": "hardhat run blockchain/scripts/test_multiple_papers.js --network localhost"
   },
   "keywords": [
     "blockchain",

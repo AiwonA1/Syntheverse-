@@ -1,0 +1,19 @@
+{
+  "timestamp": "2025-12-10T00:09:37.972Z",
+  "discoveryCount": "11",
+  "totalDensity": "898760",
+  "tokenDensity": "898760",
+  "currentEpoch": 3,
+  "epochName": "Ecosystem",
+  "sampleDiscoveryIds": [
+    "0xcaa105f6252f817b848e523bf3b72d6778559b0896fcf1510050ac128563144d",
+    "0xc06522f370085dfcffc7a2ccff038cc79161a0f5794df6b8b6a7d36d86920ec9",
+    "0xd15df8b6b51d0e9b2fe61d14d1af9165bf7de6b3a56347a6c2d811a4455f8ca8",
+    "0x67c8e793a79cfd06a9cb1740746462678948b2e3fad16c4333b0b0c1ad15a921",
+    "0xbc45ae8e42aaea0715ca4091bd2390d8dc3bb9e52919d3513f991ae51ebc0f8c"
+  ],
+  "contractAddresses": {
+    "pod": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+    "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3"
+  }
+}

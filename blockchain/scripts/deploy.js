@@ -52,8 +52,10 @@ async function main() {
   // Save deployment addresses (for local development)
   const fs = require("fs");
   const networkInfo = await ethers.provider.getNetwork();
+  const networkName = networkInfo.name === "unknown" ? "localhost" : networkInfo.name;
+  
   const deploymentInfo = {
-    network: network.name,
+    network: networkName,
     chainId: networkInfo.chainId.toString(),
     deployer: deployer.address,
     contracts: {
@@ -61,7 +63,12 @@ async function main() {
       ProofOfDiscovery: podAddress,
       AIIntegration: aiIntegrationAddress
     },
-    timestamp: new Date().toISOString()
+    timestamp: new Date().toISOString(),
+    etherscan: networkName === "sepolia" ? {
+      SyntheverseToken: `https://sepolia.etherscan.io/address/${tokenAddress}`,
+      ProofOfDiscovery: `https://sepolia.etherscan.io/address/${podAddress}`,
+      AIIntegration: `https://sepolia.etherscan.io/address/${aiIntegrationAddress}`
+    } : null
   };
 
   const deploymentsDir = "./blockchain/deployments";
@@ -69,12 +76,22 @@ async function main() {
     fs.mkdirSync(deploymentsDir, { recursive: true });
   }
 
+  const deploymentFile = `${deploymentsDir}/deployment-${networkName}.json`;
   fs.writeFileSync(
-    `${deploymentsDir}/deployment-${network.name}.json`,
+    deploymentFile,
     JSON.stringify(deploymentInfo, null, 2)
   );
 
-  console.log(`\nDeployment info saved to: ${deploymentsDir}/deployment-${network.name}.json`);
+  console.log(`\nDeployment info saved to: ${deploymentFile}`);
+  
+  if (networkName === "sepolia") {
+    console.log("\n=== Sepolia Explorer Links ===");
+    console.log("SyntheverseToken:", deploymentInfo.etherscan.SyntheverseToken);
+    console.log("ProofOfDiscovery:", deploymentInfo.etherscan.ProofOfDiscovery);
+    console.log("AIIntegration:", deploymentInfo.etherscan.AIIntegration);
+    console.log("\n💡 Tip: Verify contracts on Etherscan using:");
+    console.log("   npx hardhat verify --network sepolia <CONTRACT_ADDRESS> <CONSTRUCTOR_ARGS>");
+  }
 }
 
 main()

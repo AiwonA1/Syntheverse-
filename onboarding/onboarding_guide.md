@@ -22,7 +22,7 @@ The **Hydrogen-Holographic Fractal AI Sandbox** is your experimental environment
 
 **Location:** `hhf-ai/integration/` in the main repository
 
-**Documentation:** See [HHF_AI_INTEGRATION.md](../HHF_AI_INTEGRATION.md)
+**Documentation:** See [HHF_AI_INTEGRATION.md](../docs/guides/HHF_AI_INTEGRATION.md)
 
 ### 2. Synthechain (L1 Blockchain)
 

@@ -17,7 +17,7 @@ from hhf_ai_evaluator import get_evaluator
 
 def read_paper(filename):
     """Read paper content"""
-    paper_path = Path(__file__).parent.parent.parent / "docs" / filename
+    paper_path = Path(__file__).parent.parent.parent / "docs" / "research" / filename
     try:
         return paper_path.read_text(encoding='utf-8')
     except Exception as e:
@@ -153,5 +153,6 @@ def main():
 
 if __name__ == "__main__":
     sys.exit(main())
+
 
 

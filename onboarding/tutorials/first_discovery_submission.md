@@ -311,7 +311,7 @@ The system automatically checks for redundant content:
 
 - **Example Scripts:** `blockchain/scripts/example_usage.js`
 - **Test Scripts:** `blockchain/scripts/test_multiple_papers.js`
-- **API Reference:** [TEST_ENVIRONMENT_GUIDE.md](../../TEST_ENVIRONMENT_GUIDE.md)
+- **API Reference:** [TEST_ENVIRONMENT_GUIDE.md](../../docs/guides/TEST_ENVIRONMENT_GUIDE.md)
 - **Discovery Summary:** [PAPER_DISCOVERY_SUMMARY.md](../../test_outputs/PAPER_DISCOVERY_SUMMARY.md)
 
 ---

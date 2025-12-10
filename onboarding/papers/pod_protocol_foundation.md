@@ -2,7 +2,7 @@
 
 This is a reference to the main PoD Protocol paper in the repository.
 
-**Location:** `../docs/PoD_Protocol_Paper.md`
+**Location:** `../../docs/research/PoD_Protocol_Paper.md`
 
 **Title:** Syntheverse PoD: Hydrogen-Holographic Fractal Consensus
 

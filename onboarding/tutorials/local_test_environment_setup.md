@@ -248,9 +248,9 @@ lsof -ti:8545 | xargs kill -9
 
 ## Additional Resources
 
-- **Complete Guide:** [TEST_ENVIRONMENT_GUIDE.md](../../TEST_ENVIRONMENT_GUIDE.md)
-- **Quick Start:** [QUICKSTART.md](../../QUICKSTART.md)
-- **Persistence:** [PERSISTENCE_GUIDE.md](../../PERSISTENCE_GUIDE.md)
+- **Complete Guide:** [TEST_ENVIRONMENT_GUIDE.md](../../docs/guides/TEST_ENVIRONMENT_GUIDE.md)
+- **Quick Start:** [QUICKSTART.md](../../docs/guides/QUICKSTART.md)
+- **Persistence:** [PERSISTENCE_GUIDE.md](../../docs/guides/PERSISTENCE_GUIDE.md)
 
 ---
 

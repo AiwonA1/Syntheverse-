@@ -204,3 +204,4 @@ Empirical residuals validate that HFG predicts phase-dependent behaviors beyond 
 
 7. Bohm, D. (1980). Wholeness and the Implicate Order. Routledge.
 
+

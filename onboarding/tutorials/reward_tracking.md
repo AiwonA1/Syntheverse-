@@ -335,7 +335,7 @@ Discovery #10 (Later):
 
 - **Discovery Summary:** [PAPER_DISCOVERY_SUMMARY.md](../../test_outputs/PAPER_DISCOVERY_SUMMARY.md)
 - **Test Reports:** `test_outputs/` directory
-- **API Reference:** [TEST_ENVIRONMENT_GUIDE.md](../../TEST_ENVIRONMENT_GUIDE.md)
+- **API Reference:** [TEST_ENVIRONMENT_GUIDE.md](../../docs/guides/TEST_ENVIRONMENT_GUIDE.md)
 
 ---
 

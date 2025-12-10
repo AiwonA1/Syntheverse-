@@ -9,7 +9,7 @@ Essential research papers that form the theoretical foundation of Syntheverse.
 ### 1. HHF-AI Foundation
 **File:** `hhf_ai_foundation.pdf` (link to main docs)
 
-**Location in Repository:** `docs/HHF-AI_Paper.md`
+**Location in Repository:** `docs/research/HHF-AI_Paper.md`
 
 **Title:** Syntheverse HHF-AI: Hydrogen-Holographic Fractal Awareness System
 
@@ -30,7 +30,7 @@ cat ../docs/HHF-AI_Paper.md
 ### 2. PoD Protocol Foundation
 **File:** `pod_protocol_foundation.pdf` (link to main docs)
 
-**Location in Repository:** `docs/PoD_Protocol_Paper.md`
+**Location in Repository:** `docs/research/PoD_Protocol_Paper.md`
 
 **Title:** Syntheverse PoD: Hydrogen-Holographic Fractal Consensus
 
@@ -55,27 +55,27 @@ All papers are located in the main `docs/` directory:
 ### Available Papers
 
 1. **Awarenessverse Paper**
-   - `docs/Awarenessverse_Paper.md`
+   - `docs/research/Awarenessverse_Paper.md`
    - Awareness as the Ultimate Energy
 
 2. **Octave Harmonics Paper**
-   - `docs/Octave_Harmonics_Paper.md`
+   - `docs/research/Octave_Harmonics_Paper.md`
    - Empirical Evidence of Hydrogen Holographic Fractal Environment
 
 3. **RSI/HHFS Paper**
-   - `docs/RSI_HHFS_Paper.md`
+   - `docs/research/RSI_HHFS_Paper.md`
    - Recursive Sourced Interference in the Hydrogen‑Holographic Fractal Sandbox
 
 4. **HFG Paper**
-   - `docs/HFG_Paper.md`
+   - `docs/research/HFG_Paper.md`
    - The Holographic Fractal Grammar: An Operational Linguistics
 
 5. **FCC Paper**
-   - `docs/FCC_Paper.md`
+   - `docs/research/FCC_Paper.md`
    - Introducing Fractal Cognitive Chemistry
 
 6. **HHF Validation Suite**
-   - `docs/HHF_Validation_Suite.md`
+   - `docs/research/HHF_Validation_Suite.md`
    - Empirical Validation Framework
 
 ---
@@ -151,13 +151,13 @@ If you have research papers that align with Syntheverse principles:
 
 ```bash
 # List all papers
-ls ../docs/*.md
+ls ../../docs/research/*.md
 
 # Read a specific paper
-cat ../docs/HHF-AI_Paper.md
+cat ../../docs/research/HHF-AI_Paper.md
 
 # View paper summary
-cat ../test_outputs/PAPER_DISCOVERY_SUMMARY.md
+cat ../../test_outputs/PAPER_DISCOVERY_SUMMARY.md
 ```
 
 ---

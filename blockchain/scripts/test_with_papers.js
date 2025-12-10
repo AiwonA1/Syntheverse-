@@ -156,7 +156,7 @@ Total Log Entries: ${this.logs.length}
 
 // Read paper contents
 function readPaper(filename) {
-  const paperPath = path.join(__dirname, "../../docs", filename);
+  const paperPath = path.join(__dirname, "../../docs/research", filename);
   try {
     return fs.readFileSync(paperPath, "utf-8");
   } catch (error) {

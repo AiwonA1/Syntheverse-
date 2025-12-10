@@ -235,11 +235,12 @@ Syntheverse AI is now integrated with an L1 blockchain test environment!
    ```
 
 **Documentation:**
-- 📖 **[TEST_ENVIRONMENT_GUIDE.md](./TEST_ENVIRONMENT_GUIDE.md)** - Complete guide to the test environment
-- 🚀 **[QUICKSTART.md](./QUICKSTART.md)** - Quick setup instructions
+- 📖 **[docs/guides/TEST_ENVIRONMENT_GUIDE.md](./docs/guides/TEST_ENVIRONMENT_GUIDE.md)** - Complete guide to the test environment
+- 🚀 **[docs/guides/QUICKSTART.md](./docs/guides/QUICKSTART.md)** - Quick setup instructions
 - 🔧 **[blockchain/README.md](./blockchain/README.md)** - Technical documentation
-- 📊 **[PAPER_DISCOVERY_SUMMARY.md](./test_outputs/PAPER_DISCOVERY_SUMMARY.md)** - Test results with 8 research papers
-- 💾 **[PERSISTENCE_GUIDE.md](./PERSISTENCE_GUIDE.md)** - Blockchain persistence configuration guide
+- 📊 **[test_outputs/PAPER_DISCOVERY_SUMMARY.md](./test_outputs/PAPER_DISCOVERY_SUMMARY.md)** - Test results with 8 research papers
+- 💾 **[docs/guides/PERSISTENCE_GUIDE.md](./docs/guides/PERSISTENCE_GUIDE.md)** - Blockchain persistence configuration guide
+- 🎓 **[onboarding/README.md](./onboarding/README.md)** - Cadet welcome package
 
 **What's Included:**
 - ✅ SyntheverseToken (ERC20) with multi-epoch distribution
@@ -255,9 +256,11 @@ Syntheverse AI is now integrated with an L1 blockchain test environment!
 **Project Structure:**
 - `blockchain/` - Smart contracts, deployment scripts, tests
 - `hhf-ai/integration/` - Python bridge for AI-blockchain integration
-- `docs/` - Research papers (8 papers validated)
+- `docs/research/` - Research papers (8 papers validated)
+- `docs/guides/` - User guides and documentation
+- `onboarding/` - Cadet welcome package and tutorials
+- `scripts/` - Utility scripts (setup, testing, verification)
 - `test_outputs/` - Test reports and discovery summaries
-- `TEST_ENVIRONMENT_GUIDE.md` - Comprehensive usage guide
 
 ⸻
 

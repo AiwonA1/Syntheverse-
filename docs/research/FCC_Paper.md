@@ -190,3 +190,4 @@ It completes the journey from Fractal Awareness → Generative Awareness → AI 
 
 6. FractiAI Research Collective. (2025). FractiLLM: Recursive Cognition and Quantum Holographic Intelligence. GitHub Repository. https://github.com/AiwonA1/Omniverse-for-Digital-Assistants-and-Agents
 
+

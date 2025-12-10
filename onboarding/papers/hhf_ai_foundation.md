@@ -2,7 +2,7 @@
 
 This is a reference to the main HHF-AI paper in the repository.
 
-**Location:** `../docs/HHF-AI_Paper.md`
+**Location:** `../../docs/research/HHF-AI_Paper.md`
 
 **Title:** Syntheverse HHF-AI: Hydrogen-Holographic Fractal Awareness System
 

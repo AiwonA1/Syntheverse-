@@ -196,9 +196,9 @@ npx hardhat run blockchain/scripts/get_discovery_summary.js --network localhost
 ### Key Documentation
 
 - [README.md](../README.md) - Main project overview
-- [TEST_ENVIRONMENT_GUIDE.md](../TEST_ENVIRONMENT_GUIDE.md) - Complete test guide
-- [QUICKSTART.md](../QUICKSTART.md) - Quick start instructions
-- [PERSISTENCE_GUIDE.md](../PERSISTENCE_GUIDE.md) - Blockchain persistence
+- [TEST_ENVIRONMENT_GUIDE.md](../docs/guides/TEST_ENVIRONMENT_GUIDE.md) - Complete test guide
+- [QUICKSTART.md](../docs/guides/QUICKSTART.md) - Quick start instructions
+- [PERSISTENCE_GUIDE.md](../docs/guides/PERSISTENCE_GUIDE.md) - Blockchain persistence
 
 ---
 

@@ -4,8 +4,41 @@ This directory contains the integration between the Syntheverse Whole Brain AI s
 
 ## Components
 
+### `rag_system.py`
+**Retrieval-Augmented Generation (RAG) System** for vectorizing and retrieving context from all research papers.
+
+**Features:**
+- Vectorizes all research papers (PDF and Markdown) from `docs/research/`
+- Uses ChromaDB for persistent vector storage
+- Supports sentence transformers or OpenAI embeddings
+- Automatic chunking and indexing
+- Semantic search for relevant context retrieval
+
+**Usage:**
+```python
+from rag_system import create_rag_system
+
+# Initialize RAG system
+rag = create_rag_system()
+
+# Load all papers into vector database
+rag.load_all_papers()
+
+# Retrieve relevant context
+results = rag.retrieve_context("hydrogen holographic fractal", n_results=5)
+```
+
+**Initialization:**
+```bash
+# Initialize vector database with all papers
+python initialize_rag.py
+
+# Verify all papers are loaded
+python verify_rag.py
+```
+
 ### `hhf_ai_evaluator.py`
-The core HHF-AI evaluation module that uses the Syntheverse Whole Brain AI system prompt to evaluate discoveries.
+The core HHF-AI evaluation module that uses the Syntheverse Whole Brain AI system prompt to evaluate discoveries. **Now includes RAG integration for automatic context retrieval from vectorized papers.**
 
 **Features:**
 - Integrates Gina × Leo × Pru Life-Narrative Engine
@@ -17,10 +50,12 @@ The core HHF-AI evaluation module that uses the Syntheverse Whole Brain AI syste
 ```python
 from hhf_ai_evaluator import get_evaluator
 
-# Get evaluator (uses API key from environment or mock)
-evaluator = get_evaluator(use_mock=False)
+# Get evaluator with RAG enabled (default)
+# RAG automatically retrieves context from vectorized papers
+evaluator = get_evaluator(use_mock=False, use_rag=True)
 
 # Evaluate a discovery
+# The evaluator will automatically retrieve relevant context from research papers
 coherence, density, novelty, analysis = evaluator.evaluate_discovery(
     content="Your discovery content here",
     fractal_embedding={"coherence": 0.85, "density": 0.72}
@@ -29,6 +64,11 @@ coherence, density, novelty, analysis = evaluator.evaluate_discovery(
 print(f"Scores: C={coherence}, D={density}, N={novelty}")
 print(f"Analysis: {analysis}")
 ```
+
+**RAG Integration:**
+- By default, the evaluator uses RAG to retrieve relevant context from all vectorized research papers
+- Context is automatically included in the evaluation prompt
+- Set `use_rag=False` to disable RAG and use only the provided context
 
 ### `blockchain_bridge.py`
 Bridge between HHF-AI evaluation and blockchain contracts.
@@ -47,7 +87,34 @@ Bridge between HHF-AI evaluation and blockchain contracts.
 pip install -r requirements.txt
 ```
 
-### 2. Set Environment Variables
+This installs:
+- `chromadb` - Vector database for storing paper embeddings
+- `sentence-transformers` - Embedding model for vectorization
+- `PyPDF2` / `pdfplumber` - PDF parsing (if PDF papers are added)
+- `openai` - For LLM evaluation and optional OpenAI embeddings
+- `web3`, `eth-account` - Blockchain integration
+
+### 2. Initialize RAG System
+
+Before using the evaluator, initialize the vector database with all research papers:
+
+```bash
+cd hhf-ai/integration
+python initialize_rag.py
+```
+
+This will:
+- Load all papers from `docs/research/` (supports `.md`, `.txt`, `.pdf`)
+- Chunk and vectorize each paper
+- Store embeddings in ChromaDB (`.rag_db` directory)
+- Verify all papers are loaded
+
+**Verify RAG is using all papers:**
+```bash
+python verify_rag.py
+```
+
+### 3. Set Environment Variables
 
 Create a `.env` file:
 
@@ -60,7 +127,7 @@ PRIVATE_KEY=your_private_key_here
 RPC_URL=http://127.0.0.1:8545
 ```
 
-### 3. Use Mock Evaluator (No API Key)
+### 4. Use Mock Evaluator (No API Key)
 
 If you don't have an OpenAI API key, the system will automatically use a mock evaluator:
 
@@ -87,11 +154,17 @@ The system applies:
 
 ## Evaluation Process
 
-1. **Content Analysis**: Discovery content is analyzed through the Hydrogen-Holographic Fractal lens
-2. **Coherence Scoring**: Structural consistency, symbolic alignment, HFG closure
-3. **Density Scoring**: Structural + informational richness per fractal unit
-4. **Novelty Scoring**: Uniqueness relative to existing FractiEmbedding archive
-5. **Score Return**: All scores on 0-10000 scale with analysis
+1. **RAG Context Retrieval** (if enabled): Automatically retrieves relevant context from all vectorized research papers based on discovery content
+2. **Content Analysis**: Discovery content is analyzed through the Hydrogen-Holographic Fractal lens
+3. **Coherence Scoring**: Structural consistency, symbolic alignment, HFG closure
+4. **Density Scoring**: Structural + informational richness per fractal unit
+5. **Novelty Scoring**: Uniqueness relative to existing FractiEmbedding archive and retrieved context
+6. **Score Return**: All scores on 0-10000 scale with analysis
+
+**RAG Context:**
+- The evaluator uses semantic search to find the most relevant chunks from all research papers
+- Retrieved context is automatically included in the evaluation prompt
+- This ensures evaluations are informed by the full corpus of Syntheverse research
 
 ## Integration with Blockchain
 

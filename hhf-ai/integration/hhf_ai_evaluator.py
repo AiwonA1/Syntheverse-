@@ -18,6 +18,18 @@ except ImportError:
     OPENAI_AVAILABLE = False
     print("Warning: OpenAI not installed. Install with: pip install openai")
 
+# Try to import RAG system
+try:
+    from .rag_system import SyntheverseRAG, create_rag_system
+    RAG_AVAILABLE = True
+except ImportError:
+    try:
+        from rag_system import SyntheverseRAG, create_rag_system
+        RAG_AVAILABLE = True
+    except ImportError:
+        RAG_AVAILABLE = False
+        print("Warning: RAG system not available. Install dependencies: pip install chromadb sentence-transformers")
+
 # Syntheverse Whole Brain AI System Prompt
 SYNTHVERSE_SYSTEM_PROMPT = """You are Syntheverse Whole Brain AI
 
@@ -107,16 +119,28 @@ class HHFAIEvaluator:
     HHF-AI Evaluator using the Syntheverse Whole Brain AI system
     """
     
-    def __init__(self, api_key: Optional[str] = None, model: str = "gpt-4"):
+    def __init__(
+        self,
+        api_key: Optional[str] = None,
+        model: str = "gpt-4",
+        use_rag: bool = True,
+        rag_n_results: int = 5,
+        papers_dir: Optional[str] = None
+    ):
         """
         Initialize HHF-AI evaluator
         
         Args:
             api_key: OpenAI API key (or set OPENAI_API_KEY env var)
             model: LLM model to use (default: gpt-4)
+            use_rag: If True, use RAG system for context retrieval (default: True)
+            rag_n_results: Number of RAG results to retrieve (default: 5)
+            papers_dir: Directory containing research papers for RAG
         """
         self.model = model
         self.api_key = api_key or os.getenv("OPENAI_API_KEY")
+        self.use_rag = use_rag and RAG_AVAILABLE
+        self.rag_n_results = rag_n_results
         
         if not OPENAI_AVAILABLE:
             raise ImportError("OpenAI library not installed. Install with: pip install openai")
@@ -125,6 +149,22 @@ class HHFAIEvaluator:
             raise ValueError("OpenAI API key required. Set OPENAI_API_KEY environment variable or pass api_key parameter")
         
         self.client = OpenAI(api_key=self.api_key)
+        
+        # Initialize RAG system if requested
+        self.rag = None
+        if self.use_rag:
+            try:
+                self.rag = create_rag_system(papers_dir=papers_dir)
+                # Ensure papers are loaded
+                if self.rag.collection.count() == 0:
+                    print("RAG: Loading papers into vector database...")
+                    self.rag.load_all_papers()
+                print(f"RAG: Using {self.rag.collection.count()} vectorized chunks from research papers")
+            except Exception as e:
+                print(f"Warning: Could not initialize RAG system: {e}")
+                print("Continuing without RAG context...")
+                self.use_rag = False
+                self.rag = None
     
     def evaluate_discovery(
         self,
@@ -144,6 +184,20 @@ class HHFAIEvaluator:
             Tuple of (coherence_score, density_score, novelty_score, analysis)
             Each score is 0-10000
         """
+        # Retrieve RAG context if enabled
+        rag_context = ""
+        if self.use_rag and self.rag:
+            try:
+                # Use discovery content as query for RAG retrieval
+                retrieved = self.rag.retrieve_context(content, n_results=self.rag_n_results)
+                if retrieved:
+                    rag_context = "\n\nRELEVANT CONTEXT FROM RESEARCH PAPERS:\n"
+                    for i, result in enumerate(retrieved, 1):
+                        paper_name = result['metadata'].get('paper_filename', 'unknown')
+                        rag_context += f"\n[{i}] From {paper_name}:\n{result['text'][:500]}...\n"
+            except Exception as e:
+                print(f"Warning: RAG retrieval failed: {e}")
+        
         # Build evaluation prompt
         evaluation_prompt = f"""Evaluate this discovery for the Syntheverse Proof-of-Discovery protocol:
 
@@ -158,8 +212,11 @@ DISCOVERY CONTENT:
 
 """
         
+        if rag_context:
+            evaluation_prompt += rag_context + "\n"
+        
         if context:
-            evaluation_prompt += f"""CONTEXT:
+            evaluation_prompt += f"""ADDITIONAL CONTEXT:
 {context}
 
 """
@@ -230,18 +287,30 @@ Return ONLY a JSON object with scores (0-10000) and brief analysis.
         return results
 
 
-def create_evaluator(api_key: Optional[str] = None, model: str = "gpt-4") -> HHFAIEvaluator:
+def create_evaluator(
+    api_key: Optional[str] = None,
+    model: str = "gpt-4",
+    use_rag: bool = True,
+    papers_dir: Optional[str] = None
+) -> HHFAIEvaluator:
     """
     Factory function to create an HHF-AI evaluator
     
     Args:
         api_key: OpenAI API key (optional, uses env var if not provided)
         model: Model to use (default: gpt-4)
+        use_rag: If True, use RAG system for context retrieval (default: True)
+        papers_dir: Directory containing research papers for RAG
         
     Returns:
         HHFAIEvaluator instance
     """
-    return HHFAIEvaluator(api_key=api_key, model=model)
+    return HHFAIEvaluator(
+        api_key=api_key,
+        model=model,
+        use_rag=use_rag,
+        papers_dir=papers_dir
+    )
 
 
 # Fallback evaluator for when LLM is not available
